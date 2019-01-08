@@ -1,6 +1,6 @@
 # 目录  
 - [布拉格石人](#1-布拉格石人)  
-  - [1.1 统计学中的石人](#1.1-统计学中的石人)
+  - [1.1 统计学中的石人](#11-统计学中的石人)
 - [Preface](#preface)  
 - [Design idea and innovation point](#design-idea-and-innovation-point)  
   - [Background](#background) 
