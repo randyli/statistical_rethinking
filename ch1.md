@@ -42,7 +42,7 @@
 &emsp;&emsp;相反，研究人员需要的是一些统一化的构建石人的工程理论，一套设计、建立和完善统计程序的设计原则。 统计哲学的每个主要分支都拥有这样一个统一理论。 但是这个理论从不在介绍性课程中讲授 - 甚至在高级课程中也没有。 所以，最好将统计推断重新定位为一组策略，而不是一组工具。
 
 
-## 重新思考统计学
+## 1.2 重新思考统计学
 <!--
 A lot can go wrong with statistical inference, and this is one reason that beginners are so anxious about it. When the framework is to choose a pre-made test from a flowchart, then the anxiety can mount as one worries about choosing the “correct” test. Statisticians, for their part, can derive pleasure from scolding scientists, which just makes the psychological battle worse.
 -->
@@ -73,11 +73,11 @@ But the above is a kind of folk Popperism, an informal philosophy of science com
 <!--
 1) Hypotheses are not models. The relations among hypotheses and different kinds of models are complex. Many models correspond to the same hypothesis, and many hypotheses correspond to a single model. This makes strict falsification impossible.
 -->
-1) 假设不是模型，假设和不同模型间的关系非常复杂。很多模型对一个同一假设，很多假设又对应同一模型。严格的证伪是不可能的。
+1. 假设不是模型，假设和不同模型间的关系非常复杂。很多模型对一个同一假设，很多假设又对应同一模型。严格的证伪是不可能的。
 <!--
 2） Measurement matters. Even when we think the data falsify a model, another ob- server will debate our methods and measures. They don’t trust the data. Sometimes they are right.
 -->
-2）测量原因，有时候我们认为数据推翻了一个模型，但是其他人会质疑我们所用的方法和数据计量。他们不相信数据，而且有时候数据或者对数据的计量确实有问题。
+2. 测量原因，有时候我们认为数据推翻了一个模型，但是其他人会质疑我们所用的方法和数据计量。他们不相信数据，而且有时候数据或者对数据的计量确实有问题。
 
 <!--
 For both of these reasons, deductive falsification never works. The scientific method cannot be reduced to a statistical procedure, and so our statistical methods should not pretend. Statistical evidence is part of the hot mess that is science, with all of its combat and egotism and mutual coercion. If you believe, as I do, that science does very often work, then learning that it doesn’t work via falsification shouldn’t change your mind. But it might help you do better science, because it will open your eyes to the many legitimately useful functions of statistical golems.
@@ -85,28 +85,38 @@ For both of these reasons, deductive falsification never works. The scientific m
 
 &emsp;&emsp;基于这些原因，演绎证伪从来都是无效的。科学方法不能归纳为一个统计过程，统计方法也不能臆想。统计证据连带其争论、自我主义及彼此强制都是科学热点的一部分。如果像我一样相信科学大部分时候有用，那么通过证伪的方法来学习就不会有问题。而且还会更好的帮助做好科学研究，因为能让我们体会到很多统计石人的合理的应用。
 
+<!--
 Rethinking: Is NHST falsificationist? Null hypothesis significance testing, NHST, is often identified with the falsificationist, or Popperian, philosophy of science. However, usually NHST is used to falsify a null hypothesis, not the actual research hypothesis. So the falsification is being done to something other than the explanatory model. This seems the reverse from Karl Popper’s philosophy.
+-->
 
-思考： 无效假设显著性检验（NHST）是证伪主义吗？无效假设显著性检验经常被认为是证伪主义或者波普尔科学哲学。但是无效假设显著性检验通常证伪一个无效假设，并不是对假设做实际研究。所以证伪并不是对模型的解释。这又与卡尔波普尔的研究哲学背道而驰。
+> 思考： 无效假设显著性检验（NHST）是证伪主义吗？无效假设显著性检验经常被认为是证伪主义或者波普尔科学哲学。但是无效假设显著性检验通常证伪一个无效假设，并不是对假设做实际研究。所以证伪并不是对模型的解释。这又与卡尔波普尔的研究哲学背道而驰。
 
+<!--
 1.2.1. Hypotheses  are not models. When we attempt to falsify a hypothesis,we must work with a model of some kind. Even when the attempt is not explicitly statistical, there is always a tacit model of measurement, of evidence, that operationalizes the hypothesis. All models are false,6 so what does it mean to falsify a model? One consequence of the requirement to work with models is that it’s no longer possible to deduce that a hypothesis is false, just because we reject a model derived from it.
+-->
 
-1.2.1 假设不是模型：证伪一个假设必须使用某个模型，即使不是精确的统计也需要有一个默认的对证据的测量模型使假设能够运行。所有的模型都是假，那意味着什么？一个结果就是使用模型的一个基本要求是不能从模型中推到出假设是假的，因为我们拒绝了从中推到出的模型。
+**1.2.1 假设不是模型** 证伪一个假设必须使用某个模型，即使不是精确的统计也需要有一个默认的对证据的测量模型使假设能够运行。所有的模型都是假，那意味着什么？一个结果就是使用模型的一个基本要求是不能从模型中推到出假设是假的，因为我们拒绝了从中推到出的模型。
 
+<!--
 Let’s explore this consequence in the context of an example from population biology (Figure 1.2). Beginning in the 1960s, many evolutionary biologists became interested in the proposal that the vast majority of evolution—changes in gene frequency—are caused not by natural selection, by rather by mutation and drift. No one really doubted that natural selection is responsible for functional design. This was a debate about genetic sequences. So began several productive decades of scholarly combat over “neutral” models of molecular evolution.7 ThiscombatismoststronglyassociatedwithMotooKimura(1924–1994),who was perhaps the strongest advocate of neutral models. But many other population geneti- cists participated. As time has passed, related disciplines such as community ecology8 and anthropology9 have experienced (or are currently experiencing) their own versions of the neutrality debate.
+-->
 
-我们来看一下人口生物学，从20世纪60年代开始很多进化生物学家把注意力转向绝大多数的基因频率变化不是自然选择的结果而是有基因突变和漂移引起的。大家都坚信生物功能的设计是自然选择的结果。这是一个关于基因序列的争论。由此开始了数十年对“中立”分子进化模型的学术争辩。这场争辩与Motoo Kimura（1924-1994）最为密切相关，他可能是中立模型的最积极的倡导者。但许多其他的人口基因学家也参与其中。随着时间的推移，社区生态学和人类学等也发展出了自人的中立性辩论的版本。
+&emsp;&emsp;我们来看一下人口生物学，从20世纪60年代开始很多进化生物学家把注意力转向绝大多数的基因频率变化不是自然选择的结果而是有基因突变和漂移引起的。大家都坚信生物功能的设计是自然选择的结果。这是一个关于基因序列的争论。由此开始了数十年对“中立”分子进化模型的学术争辩。这场争辩与Motoo Kimura（1924-1994）最为密切相关，他可能是中立模型的最积极的倡导者。但许多其他的人口基因学家也参与其中。随着时间的推移，社区生态学和人类学等也发展出了自人的中立性辩论的版本。
 
-
+<!--
 Let’s use the schematic in Figure 1.2 to explore connections between motivating hypotheses and different models, in the context of the neutral evolution debate. On the left, there are two stereotyped, informal hypotheses: Either evolution is “neutral” (H0) or natu- ral selection matters somehow (H1). These hypotheses have vague boundaries, because they begin as verbal conjectures, not precise models. There are thousands of possible detailed processes that can be described as “neutral,” depending upon choices about, for example, population structure, number of sites, number of alleles at each site, mutation rates, and recombination.
+-->
 
-我们用图1.2，在进化论中立的背景下，探讨激励假设和不同模型之间的联系。 左边，有两种模式化、非正式的假设：进化是“中性”（H0）或自然选择（H1）。 这些假设界限模糊，因为它们都以口头猜想开始，而不是精确的模型。 有数千种可能的细节可以描述为“中性”，这取决于怎么选择。例如种群结构，位点数，每个位点的等位基因数，突变率和重组等都必须考虑在内。
+&emsp;&emsp;我们用图1.2，在进化论中立的背景下，探讨激励假设和不同模型之间的联系。 左边，有两种模式化、非正式的假设：进化是“中性”（H0）或自然选择（H1）。 这些假设界限模糊，因为它们都以口头猜想开始，而不是精确的模型。 有数千种可能的细节可以描述为“中性”，这取决于怎么选择。例如种群结构，位点数，每个位点的等位基因数，突变率和重组等都必须考虑在内。
 
+<!--
 Once we have made these choices, we have the middle column in Figure 1.2, detailed process models of evolution. P0A and P0B differ in that one assumes the population size and structure have been constant long enough for the distribution of alleles to reach a steady state. The other imagines instead that population size fluctuates through time, which can be true even when there is no selective difference among alleles. The “selection matters” hypothesis H1 likewise corresponds to many different process models. I’ve shown two big players: a model in which selection always favors certain alleles and another in which selection fluctu- ates through time, favoring different alleles.10
+-->
+&emsp;&emsp;经过上面的选择，我们走到图1.2的中间列，进化过程模型的细节。P0A和P0B的不同之处在于，一个假设种群大小和结构已经足够长，足以使等位基因分布达到稳定状态。 另一个则认为即使等位基因之间没有选择性差异，种群规模也是随时间波动的。自然选择假设H1同样也对应很多不同的过程模型。我展现了两个最重要的观点，一个偏向于某些特定的等位基因，但是另一个选择随时间波动的模型，偏爱另外的等位基因。
 
-经过上面的选择，我们走到图1.2的中间列，进化过程模型的细节。P0A和P0B的不同之处在于，一个假设种群大小和结构已经足够长，足以使等位基因分布达到稳定状态。 另一个则认为即使等位基因之间没有选择性差异，种群规模也是随时间波动的。自然选择假设H1同样也对应很多不同的过程模型。我展现了两个最重要的观点，一个偏向于某些特定的等位基因，但是另一个选择随时间波动的模型，偏爱另外的等位基因。
-
+<!--
 In order to challenge these process models with evidence, they have to be made into statistical models. This usually means deriving the expected frequency distribution of some quantity—a “statistic”—in the model. For example, a very common statistic in this context is the frequency distribution (histogram) of the frequency of different genetic variants (alleles). Some alleles are rare, appearing in only a few individuals. Others are very common, appear- ing in very many individuals in the population. A famous result in population genetics is that a model like P0A produces a power law distribution of allele frequencies. And so this fact yields a statistical model, MII, that predicts a power law in the data. In contrast the constant selection process model P1A predicts something quite different, MIII.
+-->
 
 为了找到证据挑战这些过程模型，必须借助统计模型。这意味着从某些数量中推导出一些预期频率分布，也就是统计量。比如在基因分析中常用的就是用直方图表示的不同基因变体（等位基因）频率的频率分布。有些等位基因非常的罕见，仅在很少的个体中出现。另一些又很多，在种群的大多数个体中都出现。群体遗传学中一个著名的结论是，P0A推导出等位基因频率符合幂律分布，基于此推导出了MII模型预测数据中的幂律。但是固定选择过程模型，P1A却推导出了完全不一样的模型MIII。
 
