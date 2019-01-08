@@ -287,6 +287,7 @@ There are many tools worth learning. In this book I’ve chosen to focus on thre
 (3) Model comparison using information criteria
 -->
 &emsp;&emsp;有很多工具值得学。本书选了三个在社会学和生物学中应用比较广的：
+
 1 贝叶斯数据分析
 
 2 多层次模型
@@ -314,6 +315,7 @@ The rise of probability theory changed that. Statistical inference compels us in
 <!--
 There are many ways to use the term “Bayesian.” But mainly it denotes a particular in- terpretation of probability. In modest terms, Bayesian inference is no more than counting the numbers of ways things can happen, according to our assumptions. Things that can hap- pen more ways are more plausible. And since probability theory is just a calculus for count- ing, this means that we can use probability theory as a general way to represent plausibility, whether in reference to countable events in the world or rather theoretical constructs like pa- rameters. Once you accept this gambit, the rest follows logically. Once we have defined our assumptions, Bayesian inference forces a purely logical way of processing that information to produce inference.
 -->
+
 &emsp;&emsp;贝叶斯这个词在许多场景下都有用到。但最主要的还是用来表示特定的概率解释。根据我们的假设，贝叶斯推断不过就是事物可能的发生方式的计数。所以有多种可能的事物用贝叶斯模型梗合适，因为概率论本身就是计数，这就意味着我们可以用概率论的通用方法描述。计数和参数统计都可以。一旦定下这个前提，剩下的就是逻辑上的事情。一旦我们定义了假设，贝叶斯推断就变成存粹的逻辑处理最后产生推论。
 
 <!--
@@ -364,13 +366,15 @@ None of this ensures that Bayesian models will be more correct than non-Bayesian
 -->
 &emsp;&emsp;这不是说贝叶斯建模比其他的方式就好。只是用贝叶斯方法更直观，不与现实世界的认知框架冲突。使学习统计简单了一些。
 
-<!-
+<!--
 Rethinking: A little history. Bayesian statistical inference is much older than the typical tools of in- troductory statistics, most of which were developed in the early 20th century. Versions of the Bayesian approach were applied to scientific work in the late 1700s and repeatedly in the 19th century. But af- ter World War I, anti-Bayesian statisticians, like Sir Ronald Fisher, succeeded in marginalizing the approach. All Fisher said about Bayesian analysis (then called inverse probability) in his influential 1925 handbook was:
 [...] the theory of inverse probability is founded upon an error, and must be wholly rejected.28
 Bayesian data analysis became increasingly accepted within statistics during the second half of the 20th century, because it proved not to be founded upon an error. All philosophy aside, it worked. Beginning in the 1990s, new computational approaches led to a rapid rise in application of Bayesian methods.29 Bayesian methods remain computationally expensive, however. And so as data sets have increased in scale—millions of rows is common in genomic analysis, for example—alternatives to or approximations to Bayesian inference remain important, and probably always will.
 -->
 >思考：贝叶斯统计的历史。贝叶斯推断实际比我们现在所用的统计工具历史都要长，大部分都是20世纪初出现的。贝叶斯方法在18世纪和19世纪在科学研究中就被反复的使用。但是一战以后，一些反对贝叶斯统计的统计学家比如罗纳德·费希尔爵士把贝叶斯方法边缘化了，在1925年他最有影响力的书的手稿中提到贝叶斯分析（当时叫做逆概率），都是这样描述的：
->逆概率完全是建立在错误基础上的，应该完全抛弃。
+
+>......逆概率完全是建立在错误基础上的，应该完全抛弃......
+
 >贝叶斯分析在20世纪后期逐渐被大家接受，因为证明了它的基础是没错的。不管哲学上怎么样，反正它起作用了。20世纪90年代开始，新计算方法的发展，贝叶斯方法也得到了极大的发展。但是贝叶斯方法依然需要大量的计算。所以对于大数据集比如几百万行基因数据的分析仍然需要寻找其他方法或者优化贝叶斯推断。
 
 1.3.2. Multilevel models. In an apocryphal telling of Hindu cosmology, it is said that the Earth rests on the back of a great elephant, who in turn stands on the back of a massive turtle. When asked upon what the turtle stands, a guru is said to reply, “it’s turtles all the way down.”
