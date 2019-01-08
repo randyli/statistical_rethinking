@@ -2,6 +2,7 @@
 - [布拉格石人](#1-布拉格石人)  
   - [1.1 统计学中的石人](#11-统计学中的石人)
   - [1.2 重新思考统计学](#12-重新思考统计学)
+  - [1.3 建造石人的三种工具](#13-建造石人的三种工具)
 - [Preface](#preface)  
 - [Design idea and innovation point](#design-idea-and-innovation-point)  
   - [Background](#background) 
@@ -210,7 +211,7 @@ Another example, this one from physics, focuses on the detection of faster-than-
 
 2005年，一支来自康奈尔大学的鸟类学家团队声称有证据表明有一种象牙喙啄木鸟（Campephilus principalis）已灭绝。这里隐含的假设是：
 
-H0：象牙喙啄木鸟灭绝了。
+<p align="center"> H0：象牙喙啄木鸟灭绝了。</p>
 
 &emsp;&emsp;只需要一个观察样本就可以证伪这个假设，虽然很多人怀疑，进行了广泛的努力搜索，再加上50000美金的活体标本线索悬赏。直到2015年也没有找到令各方都满意的证据。即使最后找到了证据，但是这个故事也应该作为黑天鹅故事的反面教材，由于观察的困难，发现不确定证据的过程很复杂，有时候黑天鹅不一定是真的黑天鹅，可能白天鹅才是真正的黑天鹅。有假阳还有假阴。回到啄木鸟的故事，相信象牙喙啄木鸟灭绝了的科学家会怀疑证伪的证据，而相信没有灭绝的科学家又只能找到特别模糊的证据去证伪。
 
@@ -240,11 +241,11 @@ In both the woodpecker and neutrino dramas, the key dilemma is whether the falsi
 -->
 1.2.2.2 *连续性假设*， 关于天鹅的故事的另一个问题是，大多数科学假设都不是“所有的天鹅都是白色的”这种形式的。而是：
 
-H0: 80%的天鹅是白色的
+<p align="center"> H0: 80%的天鹅是白色的 </p>
 
-或者：
+<p align="center"> 或者：</p>
 
-H0:黑天鹅非常少
+<p align="center"> H0:黑天鹅非常少 </p>
 <!--
 Now what are we to conclude, after observing a black swan? The null hypothesis doesn’t say black swans do not exist, but rather that they have some frequency. The task here is not to disprove or prove a hypothesis of this kind, but rather to estimate and explain the distribution of swan coloration as accurately as we can. Even when there is no measurement error of any kind, this problem will prevent us from applying the modus tollens swan story to our science.
 -->
@@ -267,70 +268,111 @@ But falsification is always consensual, not logical. In light of the real proble
 1.3. Three tools for golem engineering
 -->
 
-## 1.3. “石人”工程的三种工具
-
+## 1.3 建造石人的三种工具
+<!--
 So if attempting to mimic falsification is not a generally useful approach to statistical methods, what are we to do? We are to model. Models can be made into testing procedures— all statistical tests are also models20—but they can also be used to measure, forecast, and argue. Doing research benefits from the ability to produce and manipulate statistical models, both because scientific problems are more general than “testing” and because the pre-made golems you maybe met in introductory statistics courses are ill-fit to many research contexts. If you want to reduce your chances of wrecking Prague, then some golem engineering know- how is needed. Make no mistake: You will wreck Prague eventually. But if you are a good golem engineer, at least you’ll notice the destruction. And since you’ll know a lot about how your golem works, you stand a good chance to figure out what went wrong. Then your next golem won’t be as bad. Without the engineering training, you’re always at someone else’s mercy.
+-->
+&emsp;&emsp;如果说最小化错误率对统计方法不适用，我们怎么办？答案是模型，模型可以融入测试过程中，其实所有的统计测试也是模型，只是他们还可以用来观测，预测和争辩。输出和掌握统计模型对科研非常有帮助，一方面因为科学问题提测试更加通用，另一方面我们在统计学课程中所见到的这些已经成型的石人其实对于很多研究场景并不合适。如果你不想摧毁布拉格，了解一些石人工程技术是很有必要的。记住：你最终还是会摧毁布拉格的。只不过如果你是一个好的石人 工程师，至少你能注意到这个破坏的过程。而且因为你对石人的运作了解的比较透彻，就可以找出问题的本质。在下一个石人的建造过程中就没这么糟糕了。没有类似的工程训练，就总是依赖别人。
 
-如果说最小化错误率对统计方法不适用，我们怎么办？答案是模型，模型可以融入测试过程中，其实所有的统计测试也是模型，只是他们还可以用来观测，预测和争辩。输出和掌握统计模型对科研非常有帮助，一方面因为科学问题提测试更加通用，另一方面我们在统计学课程中所见到的这些已经成型的石人其实对于很多研究场景并不合适。如果你不想摧毁布拉格，了解一些石人工程技术是很有必要的。记住：你最终还是会摧毁布拉格的。只不过如果你是一个好的石人 工程师，至少你能注意到这个破坏的过程。而且因为你对石人的运作了解的比较透彻，就可以找出问题的本质。在下一个石人的建造过程中就没这么糟糕了。没有类似的工程训练，就总是依赖别人。
-
+<!--
 It can be hard to get a good education in statistical model building and criticism, though. Applied statistical modeling in the early 21st century is marked by the heavy use of several engineering tools that are almost always absent from introductory, and even many advanced, statistics courses. These tools aren’t really new, but they are newly popular. And many of the recent advances in statistical inference depend upon computational innovations that feel more like computer science than classical statistics, so it’s not clear who is responsible for teaching them, if anyone.
-在统计模型建立和批判方向上很难获得好的教育机会。21世纪初的应用统计模型的特点是大量使用几种工程工具，这些工具又没什么像样的介绍，甚至一些高级统计课程也没有。这些工具并不新，但是是最近才变的流行。统计推断的许多最新进展都依赖于计算机的创新，听上去更像是计算机科学而不是经典统计，所以谁有责任交给大家都不是很清晰。
+-->
 
+&emsp;&emsp;在统计模型建立和批判方向上很难获得好的教育机会。21世纪初的应用统计模型的特点是大量使用几种工程工具，这些工具又没什么像样的介绍，甚至一些高级统计课程也没有。这些工具并不新，但是是最近才变的流行。统计推断的许多最新进展都依赖于计算机的创新，听上去更像是计算机科学而不是经典统计，所以谁有责任交给大家都不是很清晰。
+
+<!--
 There are many tools worth learning. In this book I’ve chosen to focus on three broad ones that are in demand in both the social and biological sciences. These tools are:
 (1) Bayesian data analysis
 (2) Multilevel models
 (3) Model comparison using information criteria
-有很多工具值得学。本书选了三个在社会学和生物学中应用比较广的：
+-->
+&emsp;&emsp;有很多工具值得学。本书选了三个在社会学和生物学中应用比较广的：
 1 贝叶斯数据分析
-2 多层次模型
-3 信息熵模型对比
-These tools are deeply related to one another, so it makes sense to teach them together. Un- derstanding of these tools comes, as always, only with implementation—you can’t compre- hend golem engineering until you do it. And so this book focuses mostly on code, how to do things. But in the rest of this section, I provide brief introductions to the three tools.
-这三个工具批次之间联系比较紧密，所以把它们放在一起进行教授。要理解这些模型只有一条路就是实现它，只有实现它才能理解石人工程到底是怎么回事。所以本书主要关注代码怎么写，也就是怎么实现。但是本节后面的部分，我还是把这三个工具简单介绍一下。
 
+2 多层次模型
+
+3 信息熵模型对比
+
+<!--
+These tools are deeply related to one another, so it makes sense to teach them together. Un- derstanding of these tools comes, as always, only with implementation—you can’t compre- hend golem engineering until you do it. And so this book focuses mostly on code, how to do things. But in the rest of this section, I provide brief introductions to the three tools.
+-->
+&emsp;&emsp;这三个工具批次之间联系比较紧密，所以把它们放在一起进行教授。要理解这些模型只有一条路就是实现它，只有实现它才能理解石人工程到底是怎么回事。所以本书主要关注代码怎么写，也就是怎么实现。但是本节后面的部分，我还是把这三个工具简单介绍一下。
+
+<!--
 1.3.1. Bayesian data analysis.
  For the classical Greeks and Romans, wisdom and chance were enemies. Minerva (Athena), symbolized by the owl, was the personification of wisdom. Fortuna (Tyche), symbolized by the wheel of fortune, was the personification of luck, both good and bad. Minerva was mindful and measuring, while Fortuna was fickle and unreliable. Only a fool would rely on Fortuna, while all wise folk appealed to Minerva.21
+-->
 
-1.3.1 贝叶斯数据统计
-对于古希腊和古罗马人来说，智慧和机会都是敌人。弥涅尔瓦(雅典娜)以猫头鹰作为标志，是智慧的化身。福尔图娜（堤喀）以幸运之轮作为标志，是运气（好运或霉运）的化身。弥涅尔瓦充满智慧和思虑，但是福尔图娜变化无常，不可靠。只有傻瓜才会依赖福尔图娜，明智的人都会信赖弥涅尔瓦
+1.3.1 **贝叶斯数据统计**
+&emsp;&emsp;对于古希腊和古罗马人来说，智慧和机会都是敌人。弥涅尔瓦(雅典娜)以猫头鹰作为标志，是智慧的化身。福尔图娜（堤喀）以幸运之轮作为标志，是运气（好运或霉运）的化身。弥涅尔瓦充满智慧和思虑，但是福尔图娜变化无常，不可靠。只有傻瓜才会依赖福尔图娜，明智的人都会信赖弥涅尔瓦
 
+<!--
 The rise of probability theory changed that. Statistical inference compels us instead to rely on Fortuna as a servant of Minerva, to use chance and uncertainty to discover reliable knowledge. All flavors of statistical inference have this motivation. But Bayesian data anal- ysis embraces it most fully, by using the language of chance to describe the plausibility of different possibilities.
-概率论的兴起改变了上面的状况。统计推断是我们不在把福尔图娜当作米涅尔瓦诺的仆人，我们从可能和不确定性中发现确定的知识。所有的统计推断都是基于类似的出发点。但是贝叶斯统计应用的最充分，它用概率的语言来描述不同的可能性的合理性。
+-->
+&emsp;&emsp;概率论的兴起改变了上面的状况。统计推断是我们不在把福尔图娜当作米涅尔瓦诺的仆人，我们从可能和不确定性中发现确定的知识。所有的统计推断都是基于类似的出发点。但是贝叶斯统计应用的最充分，它用概率的语言来描述不同的可能性的合理性。
 
-
+<!--
 There are many ways to use the term “Bayesian.” But mainly it denotes a particular in- terpretation of probability. In modest terms, Bayesian inference is no more than counting the numbers of ways things can happen, according to our assumptions. Things that can hap- pen more ways are more plausible. And since probability theory is just a calculus for count- ing, this means that we can use probability theory as a general way to represent plausibility, whether in reference to countable events in the world or rather theoretical constructs like pa- rameters. Once you accept this gambit, the rest follows logically. Once we have defined our assumptions, Bayesian inference forces a purely logical way of processing that information to produce inference.
+-->
+&emsp;&emsp;贝叶斯这个词在许多场景下都有用到。但最主要的还是用来表示特定的概率解释。根据我们的假设，贝叶斯推断不过就是事物可能的发生方式的计数。所以有多种可能的事物用贝叶斯模型梗合适，因为概率论本身就是计数，这就意味着我们可以用概率论的通用方法描述。计数和参数统计都可以。一旦定下这个前提，剩下的就是逻辑上的事情。一旦我们定义了假设，贝叶斯推断就变成存粹的逻辑处理最后产生推论。
 
-贝叶斯这个词在许多场景下都有用到。但最主要的还是用来表示特定的概率解释。根据我们的假设，贝叶斯推断不过就是事物可能的发生方式的计数。所以有多种可能的事物用贝叶斯模型梗合适，因为概率论本身就是计数，这就意味着我们可以用概率论的通用方法描述。计数和参数统计都可以。一旦定下这个前提，剩下的就是逻辑上的事情。一旦我们定义了假设，贝叶斯推断就变成存粹的逻辑处理最后产生推论。
-
+<!--
 Chapter 2 explains this in depth. For now, it will help to have another probability concept to compare. Bayesian probability is a very general approach to probability, and it includes as a special case another important approach, the frequentist approach. The frequentist ap- proach requires that all probabilities be defined by connection to countable events and their frequencies in very large samples.22 This leads to frequentist uncertainty being premised on imaginary resampling of data—if we were to repeat the measurement many many times, we would end up collecting a list of values that will have some pattern to it. It means also that parameters and models cannot have probability distributions, only measurements can. The distribution of these measurements is called a sampling distribution. This resampling is never done, and in general it doesn’t even make sense—it is absurd to consider repeat sampling of the diversification of song birds in the Andes. As Sir Ronald Fisher, one of the most important frequentist statisticians of the 20th century, put it:
-第二张对上面的概念有详细的解释，现在我们只用它来对比另一个概率论概念。贝叶斯概率论是一种通用方法，频率论只是作为其中的一种特殊情况。频率学派要求事件之间的联系可数并且样本数足够大。导致频率学派都是希望不断的重复采样收集足够多的数据，然后就能发现其中的一些规律。也就是说参数和模型都不能有概率分布，只有观测样本可以有概率分布。对样本的观测就叫做采样。采样永远没有结束，甚至毫无意义。就像在安第斯山脉通过不断的采样才证明鸟的多样性一样。20世纪最重要的频率统计学家之一罗纳德·费希尔爵士说过：
+-->
+&emsp;&emsp;第二章对上面的概念有详细的解释，现在我们只用它来对比另一个概率论概念。贝叶斯概率论是一种通用方法，频率论只是作为其中的一种特殊情况。频率学派要求事件之间的联系可数并且样本数足够大。导致频率学派都是希望不断的重复采样收集足够多的数据，然后就能发现其中的一些规律。也就是说参数和模型都不能有概率分布，只有观测样本可以有概率分布。对样本的观测就叫做采样。采样永远没有结束，甚至毫无意义。就像在安第斯山脉通过不断的采样才证明鸟的多样性一样。20世纪最重要的频率统计学家之一罗纳德·费希尔爵士说过：
+
+<!--
 the only populations that can be referred to in a test of significance have no objective reality, being exclusively the product of the statistician’s imagination
-经过重要性检验的种群推断本有任何现实意义，完全就是统计学家的想象的产物。
+-->
 
+<p align='center'>......经过重要性检验的种群推断没有任何现实意义，完全就是统计学家的想象的产物......</p>
+
+<!--
 But in many contexts, like controlled greenhouse experiments, it’s a useful device for describ- ing uncertainty. Whatever the context, it’s just part of the model, an assumption about what the data would look like under resampling. It’s just as fantastical as the Bayesian gambit of using probability to describe all types of uncertainty, whether empirical or epistemological.24
-在很多情况下，比如温室控制实验中，它是描述不确定性的有力工具。不管在什么情况下，它都是模型的一部分，一个在采样时数据会是什么样子的假设。不管从经验上或认知上，用它描述不确定性都和贝叶斯策略一样奇幻。
+-->
+&emsp;&emsp;在很多情况下，比如温室控制实验中，它是描述不确定性的有力工具。不管在什么情况下，它都是模型的一部分，一个在采样时数据会是什么样子的假设。不管从经验上或认知上，用它描述不确定性都和贝叶斯策略一样奇幻。
 
+<!--
 But these different attitudes towards probability do enforce different trade-offs. It will help to encounter a simple example where the difference between Bayesian and frequentist probability matters. In the year 1610, Galileo turned a primitive telescope to the night sky and became the first human to see Saturn’s rings. Well, he probably saw a blob, with some smaller blobs attached to it (Figure 1.3). Since the telescope was primitive, it couldn’t really focus the image very well. Saturn always appeared blurred. This is a statistical problem, of a sort. There’s uncertainty about the planet’s shape, but notice that none of the uncertainty is a result of variation in repeat measurements. We could look through the telescope a thousand times, and it will always give the same blurred image (for any given position of the Earth and Saturn). So the sampling distribution of any measurement is constant, because the measure- ment is deterministic—there’s nothing “random” about it. Frequentist statistical inference has a lot of trouble getting started here. In contrast, Bayesian inference proceeds as usual, because the deterministic “noise” can still be modeled using probability, as long as we don’t identify probability with frequency. As a result, the field of image reconstruction and pro- cessing is dominated by Bayesian algorithms.
-对概率论的不同态度导致了不同的取舍。我们举个例子来说明贝叶斯统计和频率学派的区别。1610年伽利略把望远镜对准了夜空，成为第一个观测到土星环的人。好吧，也许伽利略只是看到了一个小斑点，附着着一些小斑点。因为当时的望远镜很原始，没法很好的聚焦。土星总是模糊不清。一定程度上说，这是个统计问题。土星的形状并不是很确定。但是请注意，这种不确定不是由于重复采样的变化导致的。我们可以看一千次望远镜，但它总是这种模糊的图像（地球上或土星上任何位置都这样）。送一采样是确定的，因为采样过程是确定的，没有任何随机性。这种情况频率学派就无从下手，贝叶斯统计就可以应对如常， 因为这种确定的噪音也可以当作模型的一部分，因为不需要用频率来表示概率。所以图像重建和图像处理领域一直都是贝叶斯算法的天下。
+-->
+&emsp;&emsp;对概率论的不同态度导致了不同的取舍。我们举个例子来说明贝叶斯统计和频率学派的区别。1610年伽利略把望远镜对准了夜空，成为第一个观测到土星环的人。好吧，也许伽利略只是看到了一个小斑点，附着着一些小斑点。因为当时的望远镜很原始，没法很好的聚焦。土星总是模糊不清。一定程度上说，这是个统计问题。土星的形状并不是很确定。但是请注意，这种不确定不是由于重复采样的变化导致的。我们可以看一千次望远镜，但它总是这种模糊的图像（地球上或土星上任何位置都这样）。送一采样是确定的，因为采样过程是确定的，没有任何随机性。这种情况频率学派就无从下手，贝叶斯统计就可以应对如常， 因为这种确定的噪音也可以当作模型的一部分，因为不需要用频率来表示概率。所以图像重建和图像处理领域一直都是贝叶斯算法的天下。
 
+<!--
 In more routine statistical procedures, like linear regression, this difference in proba- bility concepts has less of an effect. However, it is important to realize that even when a Bayesian procedure and frequentist procedure give exactly the same answer, our Bayesian golems aren’t justifying their inferences with imagined repeat sampling. More generally, Bayesian golems treat “randomness” as a property of information, not of the world. Nothing in the real world—excepting controversial interpretations of quantum physics—is actually random. Presumably, if we had more information, we could exactly predict everything. We just use randomness to describe our uncertainty in the face of incomplete knowledge. From the perspective of our golem, the coin toss is “random,” but it’s really the golem that is ran- dom, not the coin.
-在更通用的统计程序中，比如线性回归，频率学派和贝叶斯统计之间的区别影响比较小。但是必须意识到即使贝叶斯和频率派得出来了相同的结论，贝叶斯“石人”也不是通过不断的重复采样来不断修正推断。贝叶斯“石人”把随机性当作信息的属性而不是“世界”的属性。现实世界中除了有争议的量子物理以外没什么东西是真正随机的。实际上如果有足够的信息，我们可以准确预测一切。我们只是用随机描述我们面对不完整信息时的不确定。从这个角度讲其实扔硬币才是随机，硬币不随机。
-Note that the preceding description of Bayesian analysis doesn’t invoke anyone’s “beliefs” or subjective opinions. Bayesian data analysis is just a logical procedure for processing infor- mation. There is a tradition of using this procedure as a normative description of rational belief, a tradition called Bayesianism.26 But this book neither describes nor advocates it.
-注意，贝叶斯统计不包含任何个人的信念或者主观意见。贝叶斯分析只是信息处理的逻辑过程。传统上描述叫做贝叶斯主义，但是本书既不描述也不提倡它。
+-->
+&emsp;&emsp;在更通用的统计程序中，比如线性回归，频率学派和贝叶斯统计之间的区别影响比较小。但是必须意识到即使贝叶斯和频率派得出来了相同的结论，贝叶斯“石人”也不是通过不断的重复采样来不断修正推断。贝叶斯“石人”把随机性当作信息的属性而不是“世界”的属性。现实世界中除了有争议的量子物理以外没什么东西是真正随机的。实际上如果有足够的信息，我们可以准确预测一切。我们只是用随机描述我们面对不完整信息时的不确定。从这个角度讲其实扔硬币才是随机，硬币不随机。
 
+<!--
+Note that the preceding description of Bayesian analysis doesn’t invoke anyone’s “beliefs” or subjective opinions. Bayesian data analysis is just a logical procedure for processing infor- mation. There is a tradition of using this procedure as a normative description of rational belief, a tradition called Bayesianism.26 But this book neither describes nor advocates it.
+-->
+&emsp;&emsp;注意，贝叶斯统计不包含任何个人的信念或者主观意见。贝叶斯分析只是信息处理的逻辑过程。传统上描述叫做贝叶斯主义，但是本书既不描述也不提倡它。
+
+<!--
 Rethinking: Probability is not unitary. It will make some readers uncomfortable to suggest that there is more than one way to define “probability.” Aren’t mathematical concepts uniquely correct? They are not. Once you adopt some set of premises, or axioms, everything does follow logically in mathematical systems. But the axioms are open to debate and interpretation. So not only is there “Bayesian” and “frequentist” probability, but there are different versions of Bayesian probability even, relying upon different arguments to justify the approach. In more advanced Bayesian texts, you’ll come across names like Bruno de Finetti, Richard T. Cox, and Leonard “Jimmie” Savage. Each of these figures is associated with a somewhat different conception of Bayesian probability. There are others. This book mainly follows the “logical” Cox (or Laplace-Jeffreys-Cox-Jaynes) interpretation. This interpretation is presented beginning in the next chapter, but unfolds fully only in Chapter 9
-思考：概率定义的唯一性。可能有些读者会疑惑，为什么概率还可以有多种定义。数学概念不都是唯一正确的吗？然而并不是，当然如果我们采用了一些前提或者公理，在数学系统中确实会有一个逻辑去遵循。但是公理是可以质疑的。所以不是除了贝叶斯学派和频率学派就没有其他定义方式了，即使是贝叶斯概率对于不同的参数也有多种方式。在高级贝叶斯分析的书中，会出现类似德福内梯，理查德·考克斯，以及伦纳德·吉米·萨维奇。每一个名字都对概率有不同的定义。其他的还有很多。本书更多的是采用考克斯的定义。这个定义下一章会做阐述，第九章会有更详细的展开。
+-->
+> 思考：概率定义的唯一性。可能有些读者会疑惑，为什么概率还可以有多种定义。数学概念不都是唯一正确的吗？然而并不是，当然如果我们采用了一些前提或者公理，在数学系统中确实会有一个逻辑去遵循。但是公理是可以质疑的。所以不是除了贝叶斯学派和频率学派就没有其他定义方式了，即使是贝叶斯概率对于不同的参数也有多种方式。在高级贝叶斯分析的书中，会出现类似德福内梯，理查德·考克斯，以及伦纳德·吉米·萨维奇。每一个名字都对概率有不同的定义。其他的还有很多。本书更多的是采用考克斯的定义。这个定义下一章会做阐述，第九章会有更详细的展开。
+<!--
 How can different interpretations of probability theory thrive? By themselves, mathematical en- tities don’t necessarily “mean” anything, in the sense of real world implication. What does it mean to take the square root of a negative number? What does mean to take a limit as something approaches infinity? These are essential and routine concepts, but their meanings depend upon context and an- alyst, upon beliefs about how well abstraction represents reality. Mathematics doesn’t access the real world directly. So answering such questions remains a contentious and entertaining project, in all branches of applied mathematics. So while everyone subscribes to the same axioms of probability, not everyone agrees in all contexts about how to interpret probability.
-概率论的不同分支是怎么发展的呢？从根本来讲有些数学概念其实没有什么实际意义。比如负数的平方根，极限逼近。一些很重要的基础概念，它们的实际解释还依赖于上线文或个人，依赖于对现实世界的抽象怎么样。数学不是对现实世界的直接表述。所以类似的问题研究在应用数学的分支中依然非常活跃。所以即使大家遵循统一的概率公理，但是怎么解释还依赖于不同的上下文。
+-->
+&emsp;&emsp;概率论的不同分支是怎么发展的呢？从根本来讲有些数学概念其实没有什么实际意义。比如负数的平方根，极限逼近。一些很重要的基础概念，它们的实际解释还依赖于上线文或个人，依赖于对现实世界的抽象怎么样。数学不是对现实世界的直接表述。所以类似的问题研究在应用数学的分支中依然非常活跃。所以即使大家遵循统一的概率公理，但是怎么解释还依赖于不同的上下文。
+<!--
 Before moving on to describe the next two tools, it’s worth emphasizing an advantage of Bayesian data analysis, at least when scholars are learning statistical modeling. This entire book could be rewritten to remove any mention of “Bayesian.” In places, it would become easier. In others, it would become much harder. But having taught applied statistics both ways, I have found that the Bayesian framework presents a distinct pedagogical advantage: many people find it more intuitive. Perhaps best evidence for this is that very many scientists interpret non-Bayesian results in Bayesian terms, for example interpreting ordinary p-values as Bayesian posterior probabilities and non-Bayesian confidence intervals as Bayesian ones (you’ll learn posterior probability and confidence intervals in Chapters 2 and 3). Even statistics instructors make these mistakes。 In this sense then, Bayesian models lead to more intuitive interpretations, the ones scientists tend to project onto statistical results. The opposite pattern of mistake—interpreting a posterior probability as a p-value—seems to happen only rarely, if ever.
-在继续之前，我们有必要先提一下贝叶斯数据分析的优势，至少对于学习统计建模的同学更有必要。实际上本书如果把贝叶斯的相关概率去掉用其他概率也能写成，只是有的地方更简单有的地方更难。教授应用统计学的时候我两种方式都用过，我发现贝叶斯框架有独特的优势，很多人发现它更直观。可能因为很多科学家用贝叶斯的概念来解释一些非贝叶斯的概念。比如p值可以用贝叶斯后验概率解释，非贝叶斯的置信区间也可以用贝叶斯解释（第二章和第三章有讲后验概率和置信区间）。即使是统计学的老师也会弄混。所以贝叶斯建模更直观，科学家更多的用贝叶斯概率解释非贝叶斯概念，但反过来用p值解释后验概率的却很少。
+-->
+&emsp;&emsp;在继续之前，我们有必要先提一下贝叶斯数据分析的优势，至少对于学习统计建模的同学更有必要。实际上本书如果把贝叶斯的相关概率去掉用其他概率也能写成，只是有的地方更简单有的地方更难。教授应用统计学的时候我两种方式都用过，我发现贝叶斯框架有独特的优势，很多人发现它更直观。可能因为很多科学家用贝叶斯的概念来解释一些非贝叶斯的概念。比如p值可以用贝叶斯后验概率解释，非贝叶斯的置信区间也可以用贝叶斯解释（第二章和第三章有讲后验概率和置信区间）。即使是统计学的老师也会弄混。所以贝叶斯建模更直观，科学家更多的用贝叶斯概率解释非贝叶斯概念，但反过来用p值解释后验概率的却很少。
+<!--
 None of this ensures that Bayesian models will be more correct than non-Bayesian mod- els. It just means that the scientist’s intuitions will less commonly be at odds with the actual logic of the framework. This simplifies some of the aspects of teaching statistical modeling.
-这不是说贝叶斯建模比其他的方式就好。只是用贝叶斯方法更直观，不与现实世界的认知框架冲突。使学习统计简单了一些。
+-->
+&emsp;&emsp;这不是说贝叶斯建模比其他的方式就好。只是用贝叶斯方法更直观，不与现实世界的认知框架冲突。使学习统计简单了一些。
+
+<!-
 Rethinking: A little history. Bayesian statistical inference is much older than the typical tools of in- troductory statistics, most of which were developed in the early 20th century. Versions of the Bayesian approach were applied to scientific work in the late 1700s and repeatedly in the 19th century. But af- ter World War I, anti-Bayesian statisticians, like Sir Ronald Fisher, succeeded in marginalizing the approach. All Fisher said about Bayesian analysis (then called inverse probability) in his influential 1925 handbook was:
 [...] the theory of inverse probability is founded upon an error, and must be wholly rejected.28
 Bayesian data analysis became increasingly accepted within statistics during the second half of the 20th century, because it proved not to be founded upon an error. All philosophy aside, it worked. Beginning in the 1990s, new computational approaches led to a rapid rise in application of Bayesian methods.29 Bayesian methods remain computationally expensive, however. And so as data sets have increased in scale—millions of rows is common in genomic analysis, for example—alternatives to or approximations to Bayesian inference remain important, and probably always will.
-思考：贝叶斯统计的历史。贝叶斯推断实际比我们现在所用的统计工具历史都要长，大部分都是20世纪初出现的。贝叶斯方法在18世纪和19世纪在科学研究中就被反复的使用。但是一战以后，一些反对贝叶斯统计的统计学家比如罗纳德·费希尔爵士把贝叶斯方法边缘化了，在1925年他最有影响力的书的手稿中提到贝叶斯分析（当时叫做逆概率），都是这样描述的：
-逆概率完全是建立在错误基础上的，应该完全抛弃。
-贝叶斯分析在20世纪后期逐渐被大家接受，因为证明了它的基础是没错的。不管哲学上怎么样，反正它起作用了。20世纪90年代开始，新计算方法的发展，贝叶斯方法也得到了极大的发展。但是贝叶斯方法依然需要大量的计算。所以对于大数据集比如几百万行基因数据的分析仍然需要寻找其他方法或者优化贝叶斯推断。
+-->
+>思考：贝叶斯统计的历史。贝叶斯推断实际比我们现在所用的统计工具历史都要长，大部分都是20世纪初出现的。贝叶斯方法在18世纪和19世纪在科学研究中就被反复的使用。但是一战以后，一些反对贝叶斯统计的统计学家比如罗纳德·费希尔爵士把贝叶斯方法边缘化了，在1925年他最有影响力的书的手稿中提到贝叶斯分析（当时叫做逆概率），都是这样描述的：
+>逆概率完全是建立在错误基础上的，应该完全抛弃。
+>贝叶斯分析在20世纪后期逐渐被大家接受，因为证明了它的基础是没错的。不管哲学上怎么样，反正它起作用了。20世纪90年代开始，新计算方法的发展，贝叶斯方法也得到了极大的发展。但是贝叶斯方法依然需要大量的计算。所以对于大数据集比如几百万行基因数据的分析仍然需要寻找其他方法或者优化贝叶斯推断。
+
 1.3.2. Multilevel models. In an apocryphal telling of Hindu cosmology, it is said that the Earth rests on the back of a great elephant, who in turn stands on the back of a massive turtle. When asked upon what the turtle stands, a guru is said to reply, “it’s turtles all the way down.”
 1.3.2 多级模型。在印度教一个关于宇宙的传说中，地球是在一个巨大的大象背上，而大象是在一个巨大的乌龟背上。而问及乌龟在那儿，一位大神说“乌龟就是乌龟”。
 
