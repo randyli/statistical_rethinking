@@ -167,83 +167,105 @@ Rethinking: Entropy and model identification. One reason that statistical models
 
 >思考：熵和模型识别。统计模型之所以与多个不同的细节过程模型对应，其中一个原因就是统计模型依赖正态分布、二项分布、泊松分布或者其他一些分布。这些分布都属于指数族分布。自然界偏爱指数族分布，因为自然界偏爱熵，所有的指数族分布都是最大熵分布。到第9章我们会详细解释。实际情况是我们不能通过幂律推导中变异过程，也不能从身高的正太分布推导出发展过程。这大体上解释了传统的统计模型能揭示的僵化过程，也就是本书要讲的内容。也就是说，即使我们不了解内部的运行机理，我们仍然可以用这些分布的最大熵的特性做很多有用的统计工作，不光我们没法了解深层的原理而且也没必要了解。
 
+<!--
 1.2.2. Measurement matters. The logic of falsification is very simple.We have a hypothesis H, and we show that it entails some observation D. Then we look for D. If we don’t find it, we must conclude that H is false. Logicians call this kind of reasoning modus tollens, which is Latin shorthand for “the method of destruction.” In contrast, finding D tells us nothing certain about H, because other hypotheses might also predict D.
+-->
 
-1.2.2 测量问题，证伪的逻辑非常简单。首先提出一个假设H，然后需要找到一些观察D，如果找不到D，证明H是假的。逻辑学家把这种推理方式叫做肯定前件式（modus tollens），是对“the method  of destruction”的拉丁简写。但是反过来，找到D并不能肯定H，因为其他假设也可能推出D。
+**1.2.2 测量问题**，证伪的逻辑非常简单。首先提出一个假设H，然后需要找到一些观察D，如果找不到D，证明H是假的。逻辑学家把这种推理方式叫做肯定前件式（modus tollens），是对“the method  of destruction”的拉丁简写。但是反过来，找到D并不能肯定H，因为其他假设也可能推出D。
 
+<!--
 A compelling scientific fable that employs modus tollens concerns the color of swans. Before discovering Australia, all swans that any European had ever seen had white feathers. This led to the belief that all swans are white. Let’s call this a formal hypothesis:
 H0: All swans are white.
+-->
 
-提到肯定前件式推理，有一个关于天鹅颜色的科学寓言故事。在人们发现澳大利亚之前，欧洲人所见到的所有天鹅都是白色羽毛。所以大家都相信所有的天鹅都是白色的，我们用形式化方式表示：
+&emsp;&emsp;提到肯定前件式推理，有一个关于天鹅颜色的科学寓言故事。在人们发现澳大利亚之前，欧洲人所见到的所有天鹅都是白色羽毛。所以大家都相信所有的天鹅都是白色的，我们用形式化方式表示：
+
 H0:所有的天鹅都是白色的
-
+<!--
 When Europeans reached Australia, however, they encountered swans with black feathers. This evidence seemed to instantly prove H0 to be false. Indeed, not all swans are white. Some are certainly black, according to all observers. The key insight here is that, before voyaging to Australia, no number of observations of white swans could prove H0 to be true. However it required only one observation of a black swan to prove it false.
+-->
+&emsp;&emsp;但是，当欧洲人到达澳大利亚的时候，他们看到了黑羽毛的天鹅。这立刻推翻了H<sub>0</sub>，不是所有的天鹅都是白色的。基于观察我们发现有些天鹅就是黑色的。这里的核心点在于，在航行到澳大利亚之前，没有一个确切的数量的白天鹅能够证明H<sub>0</sub>是真的。但是只要观察到一个黑天鹅就能证伪H<sub>0</sub>。
 
-但是，当欧洲人到达澳大利亚的时候，他们看到了黑羽毛的天鹅。这立刻推翻了H0，不是所有的天鹅都是白色的。基于观察我们发现有些天鹅就是黑色的。这里的核心点在于，在航行到澳大利亚之前，没有一个确切的数量的白天鹅能够证明H0是真的。但是只要观察到一个黑天鹅就能证伪H0.
-
+<!--
 This is a seductive story. If we can believe that important scientific hypotheses can be stated in this form, then we have a powerful method for improving the accuracy of our theories: look for evidence that disconfirms our hypotheses. Whenever we find a black swan, H0 must be false. Progress!
 Seeking disconfirming evidence is important, but it cannot be as powerful as the swan story makes it appear. In addition to the correspondence problems among hypotheses and models, discussed in the previous section, most of the problems scientists confront are not so logically discrete. Instead, we most often face two simultaneous problems that make the swan fable misrepresentative. First, observations are prone to error, especially at the boundaries of scientific knowledge. Second, most hypotheses are quantitative, concerning degrees of existence, rather than discrete, concerning total presence or absence. Let’s briefly consider each of these problems.
+-->
 
-故事很吸引人，如果我们相信重要的科学假设可以以这种方式表述的话，我们就找到了一个神奇的方法去提升理论的准确性，我们只要努力找推翻假设的证据就可以了。每当我们找到一个类似黑天鹅的证据就能推翻H0，然后科学就进步了。
+&emsp;&emsp;故事很吸引人，如果我们相信重要的科学假设可以以这种方式表述的话，我们就找到了一个神奇的方法去提升理论的准确性，我们只要努力找推翻假设的证据就可以了。每当我们找到一个类似黑天鹅的证据就能推翻H0，然后科学就进步了。
 
-找反例很重要，但是并不总能像黑天鹅故事那要有效。除了前几节介绍的关于假设和模型的问题之外，科学家面对的问题并不总是逻辑上离散的，非黑即白的。科学家面临的问题通常都是交织在一起的，黑天鹅的寓言故事也有歪曲性。首先观察很容易出错，特别是在科学领域的边界处。另外大量的假设都是定量的，除了是否存在还涉及存在的程度。我们来解释一下这几个问题：
+&emsp;&emsp;找反例很重要，但是并不总能像黑天鹅故事那要有效。除了前几节介绍的关于假设和模型的问题之外，科学家面对的问题并不总是逻辑上离散的，非黑即白的。科学家面临的问题通常都是交织在一起的，黑天鹅的寓言故事也有歪曲性。首先观察很容易出错，特别是在科学领域的边界处。另外大量的假设都是定量的，除了是否存在还涉及存在的程度。我们来解释一下这几个问题：
 
+<!--
 1.2.2.1. Observation error. All observers will agree under most conditions that a swan is either black or white. There are few intermediate shades, and most observers’ eyes work similarly enough that there will be little, if any, disagreement about which swans are white and which are black. But this kind of example is hardly commonplace in science, at least in mature fields. Instead, we routinely confront contexts in which we are not sure if we have detected a disconfirming result. At the edges of scientific knowledge, the ability to measure a hypothetical phenomenon is often in question as much as the phenomenon itself.
 Here are two examples.
 In 2005, a team of ornithologists from Cornell claimed to have evidence of an individual Ivory-billed Woodpecker (Campephilus principalis), a species thought extinct. The hypothe- sis implied here is:
 H0: The Ivory-billed Woodpecker is extinct.
 It would only take one observation to falsify this hypothesis. However, many doubted the evidence. Despite extensive search efforts and a $50,000 cash reward for information leading to a live specimen, no evidence satisfying all parties has yet (by 2015) emerged. Even if good physical evidence does eventually arise, this episode should serve as a counterpoint to the swan story. Finding disconfirming cases is complicated by the difficulties of observation. Black swans are not always really black swans, and sometimes white swans are really black swans. There are mistaken confirmations (false positives) and mistaken disconfirmations (false negatives). Against this background of measurement difficulties, scientists who already believe that the Ivory-billed Woodpecker is extinct will always be suspicious of a claimed falsification. Those who believe it is still alive will tend to count the vaguest evidence as falsification.
 Another example, this one from physics, focuses on the detection of faster-than-light (FTL)neutrinos.12 InSeptember2011,alargeandrespectedteamofphysicistsannounced detection of neutrinos—small, neutral sub-atomic particles able to pass easily and harm- lessly through most matter—that arrived from Switzerland to Italy in slightly faster-than- lightspeed time. According to Einstein, neutrinos cannot travel faster than the speed of light. So this seems to be a falsification of special relativity. If so, it would turn physics on its head.
+-->
 
-1.2.2.1 观察错误。天鹅的所有观察者都同意大多数情况下天鹅不是黑的就是白的，几乎没有中间色，而且所有观察者的眼睛都差不多，起码在回答一个天鹅是黑还是白上大家还是能达成一致的。但是在科学领域这中情况不实那么容易达到的，特别是在成熟的领域。大多数情况下没法确定我们是不是观察到了一个推翻假设的证据。在科学知识的边界，测量假设现象所面临的挑战不亚于这个假设本身。
+1.2.2.1 *观察错误*。天鹅的所有观察者都同意大多数情况下天鹅不是黑的就是白的，几乎没有中间色，而且所有观察者的眼睛都差不多，起码在回答一个天鹅是黑还是白上大家还是能达成一致的。但是在科学领域这中情况不实那么容易达到的，特别是在成熟的领域。大多数情况下没法确定我们是不是观察到了一个推翻假设的证据。在科学知识的边界，测量假设现象所面临的挑战不亚于这个假设本身。
 
-据两个例子：
+举两个例子：
 
 2005年，一支来自康奈尔大学的鸟类学家团队声称有证据表明有一种象牙喙啄木鸟（Campephilus principalis）已灭绝。这里隐含的假设是：
+
 H0：象牙喙啄木鸟灭绝了。
 
-只需要一个观察样本就可以证伪这个假设，虽然很多人怀疑，进行了广泛的努力搜索，再加上50000美金的活体标本线索悬赏。直到2015年也没有找到令各方都满意的证据。即使最后找到了证据，但是这个故事也应该作为黑天鹅故事的反面教材，由于观察的困难，发现不确定证据的过程很复杂，有时候黑天鹅不一定是真的黑天鹅，可能白天鹅才是真正的黑天鹅。有假阳还有假阴。回到啄木鸟的故事，相信象牙喙啄木鸟灭绝了的科学家会怀疑证伪的证据，而相信没有灭绝的科学家又只能找到特别模糊的证据去证伪。
+&emsp;&emsp;只需要一个观察样本就可以证伪这个假设，虽然很多人怀疑，进行了广泛的努力搜索，再加上50000美金的活体标本线索悬赏。直到2015年也没有找到令各方都满意的证据。即使最后找到了证据，但是这个故事也应该作为黑天鹅故事的反面教材，由于观察的困难，发现不确定证据的过程很复杂，有时候黑天鹅不一定是真的黑天鹅，可能白天鹅才是真正的黑天鹅。有假阳还有假阴。回到啄木鸟的故事，相信象牙喙啄木鸟灭绝了的科学家会怀疑证伪的证据，而相信没有灭绝的科学家又只能找到特别模糊的证据去证伪。
 
-另一个例子来自物理领域，超光速中微粒子研究。在2011年9月，一个大型的顶尖物理学家组成的团队声称发现了一种小型、中性的亚原子粒子，能够轻易的并且无害的穿过大多数物质。这个消息就像超光速一样传遍了世界。根据爱因斯坦的说法，中微粒子的传播速度不会超过光速。这似乎证伪了狭义相对论，这将会彻底改变物理学的方向。
+&emsp;&emsp;另一个例子来自物理领域，超光速中微粒子研究。在2011年9月，一个大型的顶尖物理学家组成的团队声称发现了一种小型、中性的亚原子粒子，能够轻易的并且无害的穿过大多数物质。这个消息就像超光速一样传遍了世界。根据爱因斯坦的说法，中微粒子的传播速度不会超过光速。这似乎证伪了狭义相对论，这将会彻底改变物理学的方向。
+<!--
 The dominant reaction from the physics community was not “Einstein was wrong!” but instead “How did the team mess up the measurement?” The team that made the measure- ment had the same reaction, and asked others to check their calculations and attempt to replicate the result.
+-->
 
-但是物理学界的第一反应不是“爱因斯坦错了”，而是“这个团队是怎么测量的呢？”。这个团队也是这样的反应，而且还找来其他人来检验他们的计算并且尝试重现实验结果。
+&emsp;&emsp;但是物理学界的第一反应不是“爱因斯坦错了”，而是“这个团队是怎么测量的呢？”。这个团队也是这样的反应，而且还找来其他人来检验他们的计算并且尝试重现实验结果。
 
+<!--
 What could go wrong in the measurement? You might think measuring speed is a simple matter of dividing distance by time. It is, at the scale and energy you live at. But with a funda- mental particle like a neutrino, if you measure when it starts its journey, you stop the journey. The particle is consumed by the measurement. So more subtle approaches are needed. The detected difference from light-speed, furthermore, is quite small, and so even the latency of the time it takes a signal to travel from a detector to a control room can be orders of magni- tude larger. And since the “measurement” in this case is really an estimate from a statistical model, all of the assumptions of the model are now suspect. By 2013, the physics commu- nity was unanimous that the FTL neutrino result was measurement error. They found the technicalerror,whichinvolvedapoorlyattachedcable,amongotherthings.13 Furthermore, neutrinos clocked from supernova events are consistent with Einstein, and those distances are much larger and so would reveal differences in speed much better.
+-->
 
-测量过程中会出现什么样的问题呢？可能你会说测量速度还不简单吗？距离除以时间不就是速度嘛。
-这是我们生活中的场景，对于像中微子这样的基本粒子，你要测量粒子运行的开始时间点，可能就直接把运行过程给中断了。粒子本身就被测量过程消耗掉了。所以需要更精密的设计才能观测。另外因为观测到的与光速的差别非常小。所以一个信号从检测到控制室的传输都有可能引入数量级上的延时。所以在这个实验中观测值实际上上基于统计模型的一个估计值。所以模型的所有假设都值得商榷。到2013年，物理学界一致认为关于FTL中微子的观测是错误的。他们找到了技术上的缺陷。其中还有接触不良的电缆等等。后来有超新星计时器测量的结果与爱因斯坦理论是一致的，并且距离更大能更好的揭示速度差异。
+&emsp;&emsp;测量过程中会出现什么样的问题呢？可能你会说测量速度还不简单吗？距离除以时间不就是速度嘛。
 
+&emsp;&emsp;这是我们生活中的场景，对于像中微子这样的基本粒子，你要测量粒子运行的开始时间点，可能就直接把运行过程给中断了。粒子本身就被测量过程消耗掉了。所以需要更精密的设计才能观测。另外因为观测到的与光速的差别非常小。所以一个信号从检测到控制室的传输都有可能引入数量级上的延时。所以在这个实验中观测值实际上上基于统计模型的一个估计值。所以模型的所有假设都值得商榷。到2013年，物理学界一致认为关于FTL中微子的观测是错误的。他们找到了技术上的缺陷。其中还有接触不良的电缆等等。后来有超新星计时器测量的结果与爱因斯坦理论是一致的，并且距离更大能更好的揭示速度差异。
+
+<!--
 In both the woodpecker and neutrino dramas, the key dilemma is whether the falsifi- cation is real or spurious. Measurement is complicated in both cases, but in quite different ways, rendering both true-detection and false-detection plausible. Popper himself was aware of this limitation inherent in measurement, and it may be one reason that Popper himself saw science as being broader than falsification. But the probabilistic nature of evidence rarely appearswhenpracticingscientistsdiscussthephilosophyandpracticeoffalsification.14 My reading of the history of science is that these sorts of measurement problems are the norm, not the exception.15
+-->
 
-在啄木鸟和中微子的故事中，关键问题是证伪的对错。在两个场景下观测都是非常困难的事情，但是表现形式不太一样，向我们展示了证实和证伪都是合理的。波普尔自己也认识到观测过程中固有的局限性，所以他自己也认为科学比证伪更具有普适性。但是实践科学家在讨论哲学和证伪实践的时候却很少提及证据的概率本质。以我对科学史的解读，观测问题是普遍存在的，而不是偶然。
+&emsp;&emsp;在啄木鸟和中微子的故事中，关键问题是证伪的对错。在两个场景下观测都是非常困难的事情，但是表现形式不太一样，向我们展示了证实和证伪都是合理的。波普尔自己也认识到观测过程中固有的局限性，所以他自己也认为科学比证伪更具有普适性。但是实践科学家在讨论哲学和证伪实践的时候却很少提及证据的概率本质。以我对科学史的解读，观测问题是普遍存在的，而不是偶然。
 
+<!--
 1.2.2.2. Continuous hypotheses. Another problem for the swan story is that most inter- esting scientific hypotheses are not of the kind “all swans are white” but rather of the kind:
-
-1.2.2.2 连续性假设， 关于天鹅的故事的另一个问题是，大多数科学假设都不是“所有的天鹅都是白色的”这种形式的。而是：
+-->
+1.2.2.2 *连续性假设*， 关于天鹅的故事的另一个问题是，大多数科学假设都不是“所有的天鹅都是白色的”这种形式的。而是：
 
 H0: 80%的天鹅是白色的
+
 或者：
+
 H0:黑天鹅非常少
-
+<!--
 Now what are we to conclude, after observing a black swan? The null hypothesis doesn’t say black swans do not exist, but rather that they have some frequency. The task here is not to disprove or prove a hypothesis of this kind, but rather to estimate and explain the distribution of swan coloration as accurately as we can. Even when there is no measurement error of any kind, this problem will prevent us from applying the modus tollens swan story to our science.
+-->
 
-在这种情况下如果我们发现一只黑天鹅我们能得出什么结论，零假设并不否认黑天鹅的存在，只是有一个频率。任务不是证明假设或者推翻假设，而是变成了尽可能精确的估计并解释天鹅颜色的分布。即使是观测过程没有任何瑕疵，我们都没法把这个模式在科学研究中应用。
-
+&emsp;&emsp;在这种情况下如果我们发现一只黑天鹅我们能得出什么结论，零假设并不否认黑天鹅的存在，只是有一个频率。任务不是证明假设或者推翻假设，而是变成了尽可能精确的估计并解释天鹅颜色的分布。即使是观测过程没有任何瑕疵，我们都没法把这个模式在科学研究中应用。
+<!--
 You might object that the hypothesis above is just not a good scientific hypothesis, be- cause it isn’t easy to disprove. But if that’s the case, then most of the important questions about the world are not good scientific hypotheses. In that case, we should conclude that the definition of a “good hypothesis” isn’t doing us much good. Now, nearly everyone agrees that it is a good practice to design experiments and observations that can differentiate competing hypotheses. But in many cases, the comparison must be probabilistic, a matter of degree, not kind.
-
-有可能你会反对，说这个假设本身不是一个好假设，因为它不容易证伪。但是如果这就是实际情况的话，世界上大部分假设都不是好假设。也就是说定义为“好假设”的假设可能对我们都没什么用。现在大家可能都认同设计实验和观测的过程中要考虑竞争假设。但是很多时候，竞争性也是概率问题，是一种程度而不是是非。
-
+-->
+&emsp;&emsp;有可能你会反对，说这个假设本身不是一个好假设，因为它不容易证伪。但是如果这就是实际情况的话，世界上大部分假设都不是好假设。也就是说定义为“好假设”的假设可能对我们都没什么用。现在大家可能都认同设计实验和观测的过程中要考虑竞争假设。但是很多时候，竞争性也是概率问题，是一种程度而不是是非。
+<!--
 1.2.3. Falsification is consensual. The scientific community does come to regard some hypotheses as false. The caloric theory of heat and the geocentric model of the universe are no longer taught in science courses, unless it’s to teach how they were falsified. And evidence often—but not always—has something to do with such falsification.
-
-证伪是双向的，科学界确实对一些假设达成共识认为是错误的。比如热质说和地心说都已经不在科学课程里教授了，除了想大家展示他们的证伪过程外。证据通常（不是必然）都跟证伪过程有一定的关联。
-
+-->
+&emsp;&emsp;证伪是双向的，科学界确实对一些假设达成共识认为是错误的。比如热质说和地心说都已经不在科学课程里教授了，除了想大家展示他们的证伪过程外。证据通常（不是必然）都跟证伪过程有一定的关联。
+<!--
 But falsification is always consensual, not logical. In light of the real problems of measure- ment error and the continuous nature of natural phenomena, scientific communities argue towards consensus about the meaning of evidence. These arguments can be messy. After the fact,sometextbooksmisrepresentthehistorysoitappearslikelogicalfalsification.18 Such historical revisionism may hurt everyone. It may hurt scientists, by rendering it impossible for their own work to live up to the legends that precede them. It may make science an easy target, by promoting an easily attacked model of scientific epistemology. And it may hurt the public, by exaggerating the definitiveness of scientific knowledge.19
+-->
+&emsp;&emsp;但是证伪通常是双向的，非逻辑性的。因为观测误差和自然现象的连续性，科学界对证据的可靠性有很大的争议。这些争议可能非常的混乱。所以一些教科书实际上歪曲了历史，严格意义上讲甚至是错误的。这样的历史修正主义会伤害我们每一个人。对科学家也是一种伤害，试他们根本无法达到之前的高度。推广一种脆弱的模型会把科学描述成一种简单的目标。夸大科学认知的确定性，可能会对大众产生伤害。
 
-但是证伪通常是双向的，非逻辑性的。因为观测误差和自然现象的连续性，科学界对证据的可靠性有很大的争议。这些争议可能非常的混乱。所以一些教科书实际上歪曲了历史，严格意义上讲甚至是错误的。这样的历史修正主义会伤害我们每一个人。对科学家也是一种伤害，试他们根本无法达到之前的高度。推广一种脆弱的模型会把科学描述成一种简单的目标。夸大科学认知的确定性，可能会对大众产生伤害。
-
-
+<!--
 1.3. Three tools for golem engineering
+-->
 
 ## 1.3. “石人”工程的三种工具
 
