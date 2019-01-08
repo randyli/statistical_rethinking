@@ -116,44 +116,56 @@ Let’s use the schematic in Figure 1.2 to explore connections between motivatin
 <!--
 Once we have made these choices, we have the middle column in Figure 1.2, detailed process models of evolution. P0A and P0B differ in that one assumes the population size and structure have been constant long enough for the distribution of alleles to reach a steady state. The other imagines instead that population size fluctuates through time, which can be true even when there is no selective difference among alleles. The “selection matters” hypothesis H1 likewise corresponds to many different process models. I’ve shown two big players: a model in which selection always favors certain alleles and another in which selection fluctu- ates through time, favoring different alleles.10
 -->
-&emsp;&emsp;经过上面的选择，我们走到图1.2的中间列，进化过程模型的细节。P<sub>0A</sub>和P<sub>0B</sub>的不同之处在于，一个假设种群大小和结构已经足够长，足以使等位基因分布达到稳定状态。 另一个则认为即使等位基因之间没有选择性差异，种群规模也是随时间波动的。自然选择假设H1同样也对应很多不同的过程模型。我展现了两个最重要的观点，一个偏向于某些特定的等位基因，但是另一个选择随时间波动的模型，偏爱另外的等位基因。
+&emsp;&emsp;经过上面的选择，我们走到图1-2的中间列，进化过程模型的细节。P<sub>0A</sub>和P<sub>0B</sub>的不同之处在于，一个假设种群大小和结构已经足够长，足以使等位基因分布达到稳定状态。 另一个则认为即使等位基因之间没有选择性差异，种群规模也是随时间波动的。自然选择假设H1同样也对应很多不同的过程模型。我展现了两个最重要的观点，一个偏向于某些特定的等位基因，但是另一个选择随时间波动的模型，偏爱另外的等位基因。
 
 <!--
 In order to challenge these process models with evidence, they have to be made into statistical models. This usually means deriving the expected frequency distribution of some quantity—a “statistic”—in the model. For example, a very common statistic in this context is the frequency distribution (histogram) of the frequency of different genetic variants (alleles). Some alleles are rare, appearing in only a few individuals. Others are very common, appear- ing in very many individuals in the population. A famous result in population genetics is that a model like P0A produces a power law distribution of allele frequencies. And so this fact yields a statistical model, MII, that predicts a power law in the data. In contrast the constant selection process model P1A predicts something quite different, MIII.
 -->
 
-为了找到证据挑战这些过程模型，必须借助统计模型。这意味着从某些数量中推导出一些预期频率分布，也就是统计量。比如在基因分析中常用的就是用直方图表示的不同基因变体（等位基因）频率的频率分布。有些等位基因非常的罕见，仅在很少的个体中出现。另一些又很多，在种群的大多数个体中都出现。群体遗传学中一个著名的结论是，P0A推导出等位基因频率符合幂律分布，基于此推导出了MII模型预测数据中的幂律。但是固定选择过程模型，P1A却推导出了完全不一样的模型MIII。
+为了找到证据挑战这些过程模型，必须借助统计模型。这意味着从某些数量中推导出一些预期频率分布，也就是统计量。比如在基因分析中常用的就是用直方图表示的不同基因变体（等位基因）频率的频率分布。有些等位基因非常的罕见，仅在很少的个体中出现。另一些又很多，在种群的大多数个体中都出现。群体遗传学中一个著名的结论是，P<sub>0A</sub>推导出等位基因频率符合幂律分布，基于此推导出了M<sub>Ⅱ</sub>模型预测数据中的幂律。但是固定选择过程模型，P<sub>1A</sub>却推导出了完全不一样的模型M<sub>Ⅲ</sub>。
 
+<!--
 Unfortunately, other selection models (P1B) imply the same statistical model, MII, as the neutral model. They also produce power laws. So we’ve reached the uncomfortable lesson:
 (1) Any given statistical model (M) may correspond to more than one process model (P).
 (2) Any given hypothesis (H) may correspond to more than one process model (P). (3) Any given statistical model (M) may correspond to more than one hypothesis (H).
+-->
 
-不幸的是，其他的模型（P1B）和中性模型一样也能推到出统计模型MII，也推导出幂律。这就尴尬了：
+不幸的是，其他的模型（P<sub>1B</<sub>）和中性模型一样也能推到出统计模型M<sub>Ⅱ</sub>，也推导出幂律。这就尴尬了：
 1 一个统计模型（M），可能对应多个过程模型（P）。
 
 2 一个假设可能对应多个过程模型（P）
 
 3 一个统计模型可能对应多个假设（H）
 
+<!--
 Now look what happens when we compare the statistical models to data. The classical ap- proach is to take the “neutral” model as a null hypothesis. If the data are not sufficiently similar to the expectation under the null, then we say that we “reject” the null hypothesis. Suppose we follow the history of this subject and take P0A as our null hypothesis. This implies data corresponding to MII. But since the same statistical model corresponds to a selection model P1B, it’s not at all clear what we are to make of either rejecting or accepting the null. The null model is not unique to any process model nor hypothesis. If we reject the null, we can’t really conclude that selection matters, because there are other neutral models that predict different distributions of alleles. And if we fail to reject the null, we can’t really conclude that evolution is neutral, because some selection models expect the same frequency distribution.
+-->
 
-现在我们对比一下统计模型和数据。传统方法把中性模型作为无效假设。如果数据在无效假设下不满足一定的期望，我们拒绝无效假设。如果我们遵从这个研究方向的传统方法，把P0A作为我们的无效假设。这意味中数据服从MII。但是因为一些统计模型对应P1B，所以我们没法确定是拒绝还是接受这个无效假设。无效模型不唯一对应任何过程模型或者假设。如果我们拒绝这个无效假设，不能推导出自然选择，因为其他的中性模型推导出不同的等位基因分布。如果我们不能拒绝这个无效假设，也就没法断定进化是中性的，因为自然选择的模型能推导出同样的频率分布。
+现在我们对比一下统计模型和数据。传统方法把中性模型作为无效假设。如果数据在无效假设下不满足一定的期望，我们拒绝无效假设。如果我们遵从这个研究方向的传统方法，把P<sub>0A</sub>作为我们的无效假设。这意味中数据服从M<sub>Ⅱ</sub>。但是因为一些统计模型对应P<sub>1B</sub>，所以我们没法确定是拒绝还是接受这个无效假设。无效模型不唯一对应任何过程模型或者假设。如果我们拒绝这个无效假设，不能推导出自然选择，因为其他的中性模型推导出不同的等位基因分布。如果我们不能拒绝这个无效假设，也就没法断定进化是中性的，因为自然选择的模型能推导出同样的频率分布。
 
+<!--
 This is a huge bother. Once we have the diagram in Figure 1.2, it’s easy to see the problem. But few of us are so lucky. While population genetics has recognized this issue, scholars in other disciplines continue to test frequency distributions against power law expectations, arguing even that there is only one neutral model.11 Even if there were only one neutral model, there are so many non-neutral models that mimic the predictions of neutrality, that neither rejecting nor failing to reject the null model carries much inferential power.
+-->
 
-这麻烦就大了，如果我们有图1.2，我们很容易发现问题，但是不是都能达到这种理想状况。群体基因学的学者们意识到了这个问题，但其他领域的学者还在测试频率分布是否符合幂律，甚至认为仅有一个中性模型。即使只有一个中性模型，也有很多非中性模型能模拟中性模型，既不拒绝模型也不能拒绝无效假设模型有很强的推测能力。
+这麻烦就大了，如果我们有图1-2，我们很容易发现问题，但是不是都能达到这种理想状况。群体基因学的学者们意识到了这个问题，但其他领域的学者还在测试频率分布是否符合幂律，甚至认为仅有一个中性模型。即使只有一个中性模型，也有很多非中性模型能模拟中性模型，既不拒绝模型也不能拒绝无效假设模型有很强的推测能力。
 
+<!--
 And while you might think that more routine statistical models, like linear regressions (Chapter 4), don’t carry such risk, think again. A typical “null” in these contexts is just that there is zero average difference between groups. But there are usually many different ways for this average to be close to or consistent with zero, just as there are many different ways to get a power law. This recognition lies behind many common practices in statistical inference, such as consideration of unobserved variables and sampling bias.
+-->
 
-大家可能会说，很多常规统计模型像线性回归（第四章）就没这个风险。但是深入想想就会发现，一个典型的无效假设的无效只是分组之间的平均差异为0。但是有很多中方法可以让这种差异接近0或者等于0，同样也有很多中方法得到幂律。背后有很多统计推断常见的实践方法，比如考虑未知变量和抽样偏差。
+大家可能会说，很多常规统计模型像线性回归（第四章）就没这个风险。但是深入想想就会发现，一个典型的无效假设的无效只是分组之间的平均差异为0。但是有很多种方法可以让这种差异接近0或者等于0，同样也有很多种方法得到幂律。背后有很多统计推断常见的实践方法，比如考虑未知变量和抽样偏差。
 
+<!--
 So what can be done? Well, if you have multiple process models, a lot can be done. If it turns out that all of the process models of interest make very similar predictions, then you know to search for a different description of the evidence, a description under which the processes look different. For example, while P0A and P1B make very similar power law predictions for the frequency distribution of alleles, they make very dissimilar predictions for the distribution of changes in allele frequency over time. In other words, explicitly compare predictions of more than one model, and you can save yourself from some ordinary kinds of folly.
+-->
 
-那我们怎么做呢？如果有多个过程模型，可以有很多做法。如果所有的过程模型作出了相似的预测，可以找有关证据的其他描述，在此描述下过程不同。比如虽然P0A和P1B都对等位基因的分布作出了幂律预测，但是对等位基因随时间的变化能作出完全不同的预测。也就是对比多个模型，能够避免一些常见的错误。
+那我们怎么做呢？如果有多个过程模型，可以有很多做法。如果所有的过程模型作出了相似的预测，可以找有关证据的其他描述，在此描述下过程不同。比如虽然P<sub>0A</sub>和P<sub>1B</sub>都对等位基因的分布作出了幂律预测，但是对等位基因随时间的变化能作出完全不同的预测。也就是对比多个模型，能够避免一些常见的错误。
 
+<!--
 Rethinking: Entropy and model identification. One reason that statistical models routinely correspond to many different detailed process models is because they rely upon distributions like the nor- mal, binomial, Poisson, and others. These distributions are members of a family, the exponential family. Nature loves the members of this family. Nature loves them because nature loves entropy, and all of the exponential family distributions are maximum entropy distributions. Taking the nat- ural personification out of that explanation will wait until Chapter 9. The practical implication is that one can no more infer evolutionary process from a power law than one can infer developmental process from the fact that height is normally distributed. This fact should make us humble about what typical regression models—the meat of this book—can teach us about mechanistic process. On the other hand, the maximum entropy nature of these distributions means we can use them to do useful statistical work, even when we can’t identify the underlying process. Not only can we not identify it, but we don’t have to.
+-->
 
-深入思考：熵和模型识别。统计模型之所以与多个不同的细节过程模型对应，其中一个原因就是统计模型依赖正态分布、二项分布、泊松分布或者其他一些分布。这些分布都属于指数族分布。自然界偏爱指数族分布，因为自然界偏爱熵，所有的指数族分布都是最大熵分布。到第9章我们会详细解释。实际情况是我们不能通过幂律推导中变异过程，也不能从身高的正太分布推导出发展过程。这大体上解释了传统的统计模型能揭示的僵化过程，也就是本书要讲的内容。也就是说，即使我们不了解内部的运行机理，我们仍然可以用这些分布的最大熵的特性做很多有用的统计工作，不光我们没法了解深层的原理而且也没必要了解。
+>思考：熵和模型识别。统计模型之所以与多个不同的细节过程模型对应，其中一个原因就是统计模型依赖正态分布、二项分布、泊松分布或者其他一些分布。这些分布都属于指数族分布。自然界偏爱指数族分布，因为自然界偏爱熵，所有的指数族分布都是最大熵分布。到第9章我们会详细解释。实际情况是我们不能通过幂律推导中变异过程，也不能从身高的正太分布推导出发展过程。这大体上解释了传统的统计模型能揭示的僵化过程，也就是本书要讲的内容。也就是说，即使我们不了解内部的运行机理，我们仍然可以用这些分布的最大熵的特性做很多有用的统计工作，不光我们没法了解深层的原理而且也没必要了解。
 
 1.2.2. Measurement matters. The logic of falsification is very simple.We have a hypothesis H, and we show that it entails some observation D. Then we look for D. If we don’t find it, we must conclude that H is false. Logicians call this kind of reasoning modus tollens, which is Latin shorthand for “the method of destruction.” In contrast, finding D tells us nothing certain about H, because other hypotheses might also predict D.
 
