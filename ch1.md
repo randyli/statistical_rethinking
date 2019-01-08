@@ -1,6 +1,7 @@
 # 目录  
 - [布拉格石人](#1-布拉格石人)  
   - [1.1 统计学中的石人](#11-统计学中的石人)
+  - [1.2 重新思考统计学](#12-重新思考统计学)
 - [Preface](#preface)  
 - [Design idea and innovation point](#design-idea-and-innovation-point)  
   - [Background](#background) 
@@ -22,58 +23,67 @@
 ![图1-1](https://github.com/randyli/statistical_rethinking/blob/master/images/figure1-1.png?raw=true)
 *图1-1 选择统计方法的决策树或者流程图的一个例子，从最上面开始，回答几个问题就可以找到一个统计方法，当然类似的决策流程还有很多*
 
-&nbsp;&nbsp;有时这些模型的硬逻辑揭示了一些以前设计师不知道的意义，这些发现可能是无价之宝，也可能产生愚蠢和危险的后果。 科学模型不是理想化的理性天使，而是强大的粘土机器人，他们没有自己的意识，只会按照预设的短视指令笨手笨脚的工作。 与拉比.犹大的石人一样，科学的石人也有它的正面和负面。 我们绝对必须使用它们，但这样做同时也会伴随一些风险。
+&emsp;&emsp;有时这些模型的硬逻辑揭示了一些以前设计师不知道的意义，这些发现可能是无价之宝，也可能产生愚蠢和危险的后果。 科学模型不是理想化的理性天使，而是强大的粘土机器人，他们没有自己的意识，只会按照预设的短视指令笨手笨脚的工作。 与拉比.犹大的石人一样，科学的石人也有它的正面和负面。 我们绝对必须使用它们，但这样做同时也会伴随一些风险。
 
-统计模型有很多种。 每当有人部署一个简单的统计程序时，比如经典的t检验，她就会部署一个小石人。石人乖乖地进行精确计算，每次都以相同（接近）的方式执行，从不抱怨。 几乎每一个科学分支都会依赖于统计石人的探索能力。 在许多情况下，如果不使用模型，测量感兴趣的现象几乎是不可能的。 比如测量自然选择的强度或中微子的速度或亚马逊物种的数量，我们都必须使用模型。 模型是一个假肢，为我们做测量，并进行令人精确的计算，找到隐含的模式。
+&emsp;&emsp;统计模型有很多种。 每当有人部署一个简单的统计程序时，比如经典的t检验，她就会部署一个小石人。石人乖乖地进行精确计算，每次都以相同（接近）的方式执行，从不抱怨。 几乎每一个科学分支都会依赖于统计石人的探索能力。 在许多情况下，如果不使用模型，测量感兴趣的现象几乎是不可能的。 比如测量自然选择的强度或中微子的速度或亚马逊物种的数量，我们都必须使用模型。 模型是一个假肢，为我们做测量，并进行令人精确的计算，找到隐含的模式。
 
-然而，石人并没有智慧。 当所处的环境不适合其解答的时候，它也无法辨别。 它只知道自己的程序，没有别的。你告诉它怎么做就怎么做。所以统计科学能够一直发展下去，也有赖于有许多不同的石人，每个石人都只在特定的场景下有用。 从这个角度来看，统计既不是数学也不是科学，而是工程学的一个分支。 和工程学一样，一套通用的设计准则产生了各种各样的特定应用。
+&emsp;&emsp;然而，石人并没有智慧。 当所处的环境不适合其解答的时候，它也无法辨别。 它只知道自己的程序，没有别的。你告诉它怎么做就怎么做。所以统计科学能够一直发展下去，也有赖于有许多不同的石人，每个石人都只在特定的场景下有用。 从这个角度来看，统计既不是数学也不是科学，而是工程学的一个分支。 和工程学一样，一套通用的设计准则产生了各种各样的特定应用。
 
-这种多样化的应用解释了为什么统计课程经常让初学者感觉非常混乱。 因为没有一个统一的方法去建立、完善和评价统计模型，大家拿到的是一大堆叫做“测试”的石人，每项“测试”都有特定的目的。 像如图1.1中的决策树，就很常见。 通过回答一系列问题，用户可以根据他们的研究的环境选择所谓的“正确”方法。
+&emsp;&emsp;这种多样化的应用解释了为什么统计课程经常让初学者感觉非常混乱。 因为没有一个统一的方法去建立、完善和评价统计模型，大家拿到的是一大堆叫做“测试”的石人，每项“测试”都有特定的目的。 像如图1.1中的决策树，就很常见。 通过回答一系列问题，用户可以根据他们的研究的环境选择所谓的“正确”方法。
 
-虽然经验丰富的统计学家能够掌握这些统计工具的统一性，但学生和研究人员很少能达到这样的深度。高级统计课程确实强调工程原理，但大多数科学家达不到这样的标准。 这种方式的统计学教学有点像逆向教学法，从桥梁建设开始学逐步深入到基础物理学。 因此，学生和许多科学家倾向于使用图1.1之类的图表既不不深入考虑他们的原理结构，也不深究每个工具所代表的模型，也没有任何框架来帮助他们在真正的研究过程中做一些权衡。 当然这样做也没错。
+&emsp;&emsp;虽然经验丰富的统计学家能够掌握这些统计工具的统一性，但学生和研究人员很少能达到这样的深度。高级统计课程确实强调工程原理，但大多数科学家达不到这样的标准。 这种方式的统计学教学有点像逆向教学法，从桥梁建设开始学逐步深入到基础物理学。 因此，学生和许多科学家倾向于使用图1.1之类的图表既不不深入考虑他们的原理结构，也不深究每个工具所代表的模型，也没有任何框架来帮助他们在真正的研究过程中做一些权衡。 当然这样做也没错。
 
-对于一些人来说，预制的石人工具箱就是他们所需要的。 只要保证在经过充分测试的上下文环境中使用，在适当的任务中仅使用少数几个不同的程序，就可以完成许多优秀的科学研究。 这类似于大多数水管可能并不了解流体动力学，但他依然可以完成大量的工作。 但是当研究人员进行创新研究，突破他们专业的界限时，就有问题了。 这就好比让水管工提升为液压工程师。
+&emsp;&emsp;对于一些人来说，预制的石人工具箱就是他们所需要的。 只要保证在经过充分测试的上下文环境中使用，在适当的任务中仅使用少数几个不同的程序，就可以完成许多优秀的科学研究。 这类似于大多数水管可能并不了解流体动力学，但他依然可以完成大量的工作。 但是当研究人员进行创新研究，突破他们专业的界限时，就有问题了。 这就好比让水管工提升为液压工程师。
 
-为什么统计测试不足以支持创新研究呢？ **描述性统计** 的经典方法往往缺乏灵活性并且很脆弱。缺乏灵活性，意思是当聚焦到非常具体的研究问题时，他们有非常有限的方式来适应。脆弱的意思是在应对新的问题时，经典的统计工具往往很失败。这很重要，因为在大多数科学边界，几乎没有哪个清楚哪种程序适合。在新的研究问题中，没有一个传统的石人被评估过，因此很难选择一个然后去了解它的行为方式。Fisher精确检验就是一个很好的例子，它的应用面实际非常窄。但只要细胞数量很少，人们就会经常使用它。我已经在科学期刊上亲自阅读了Fisher精确测试的数百种用途，但除了Fisher最初的使用环境之外，我从未见过正确的使用方法。甚至像最普通的线性回归这样的方法，虽然在许多方面都非常灵活，能够处理大量有趣的假设，有时也很脆弱。比如，如果预测变量存在大量测量误差，线性回归就极有可能失败。更重要的一点，其他有些方法几乎总是可以做得比普通的线性回归好，但主要是因为过度拟合的原因（第6章）。
+&emsp;&emsp;为什么统计测试不足以支持创新研究呢？ **描述性统计** 的经典方法往往缺乏灵活性并且很脆弱。缺乏灵活性，意思是当聚焦到非常具体的研究问题时，他们有非常有限的方式来适应。脆弱的意思是在应对新的问题时，经典的统计工具往往很失败。这很重要，因为在大多数科学边界，几乎没有哪个清楚哪种程序适合。在新的研究问题中，没有一个传统的石人被评估过，因此很难选择一个然后去了解它的行为方式。Fisher精确检验就是一个很好的例子，它的应用面实际非常窄。但只要细胞数量很少，人们就会经常使用它。我已经在科学期刊上亲自阅读了Fisher精确测试的数百种用途，但除了Fisher最初的使用环境之外，我从未见过正确的使用方法。甚至像最普通的线性回归这样的方法，虽然在许多方面都非常灵活，能够处理大量有趣的假设，有时也很脆弱。比如，如果预测变量存在大量测量误差，线性回归就极有可能失败。更重要的一点，其他有些方法几乎总是可以做得比普通的线性回归好，但主要是因为过度拟合的原因（第6章）。
 
-问题的关键不在于这些统计工具是否专业，它们当然很专业。 关键问题是这些经典的工具连许多常见的研究问题都处理不了。 每个活跃的科学领域都会面临特定的测量和解释困难，与其他领域的其他科学家的理论交流用的几乎都是别人无法理解的“黑话”。统计专家是可以提供帮助，但由于缺乏对该学科的经验和理论，经常解释的驴唇不对马嘴。 在这样的环境下，预制的石人根本没有任何用处。 更糟糕的是，这些石人还会把大本营布拉格摧毁。 而如果我们不断添加新类型的工具，很快就没法维护了。
+&emsp;&emsp;问题的关键不在于这些统计工具是否专业，它们当然很专业。 关键问题是这些经典的工具连许多常见的研究问题都处理不了。 每个活跃的科学领域都会面临特定的测量和解释困难，与其他领域的其他科学家的理论交流用的几乎都是别人无法理解的“黑话”。统计专家是可以提供帮助，但由于缺乏对该学科的经验和理论，经常解释的驴唇不对马嘴。 在这样的环境下，预制的石人根本没有任何用处。 更糟糕的是，这些石人还会把大本营布拉格摧毁。 而如果我们不断添加新类型的工具，很快就没法维护了。
 
-相反，研究人员需要的是一些统一化的构建石人的工程理论，一套设计、建立和完善统计程序的设计原则。 统计哲学的每个主要分支都拥有这样一个统一理论。 但是这个理论从不在介绍性课程中讲授 - 甚至在高级课程中也没有。 所以，最好将统计推断重新定位为一组策略，而不是一组工具。
+&emsp;&emsp;相反，研究人员需要的是一些统一化的构建石人的工程理论，一套设计、建立和完善统计程序的设计原则。 统计哲学的每个主要分支都拥有这样一个统一理论。 但是这个理论从不在介绍性课程中讲授 - 甚至在高级课程中也没有。 所以，最好将统计推断重新定位为一组策略，而不是一组工具。
 
 
-## 重新定义统计学
+## 重新思考统计学
+<!--
 A lot can go wrong with statistical inference, and this is one reason that beginners are so anxious about it. When the framework is to choose a pre-made test from a flowchart, then the anxiety can mount as one worries about choosing the “correct” test. Statisticians, for their part, can derive pleasure from scolding scientists, which just makes the psychological battle worse.
+-->
+&emsp;&emsp;统计推断可能会出现很多问题，这也是为什么很多初学者在面对这种不确定的结果时而倍感焦虑。 当基本的研究框架是从一个类似流程图中选择预制的测试时，大家就会担心我是不是选择了正确的测试。对统计学家来说向来都是以鄙视科学家为乐，这些不确定性让这种心理愈发严重。
 
-统计推断可能会出现很多问题，这也是为什么很多初学者在面对这种不确定的结果时而倍感焦虑。 当基本的研究框架是从一个类似流程图中选择预制的测试时，大家就会担心我是不是选择了正确的测试。对统计学家来说向来都是以鄙视科学家为乐，这些不确定性让这种心理愈发严重。
-
+<!--
 But anxiety can be cultivated into wisdom. That is the reason that this book insists on working with the computational nuts and bolts of each golem. If you don’t understand how the golem processes information, then you can’t interpret the golem’s output. This requires knowing the statistical model in greater detail than is customary, and it requires doing the computations the hard way, at least until you are wise enough to use the push-button solu- tions.
+-->
+&emsp;&emsp;但人都是这样，有压力才有动力。所以本书坚持把“统计石人”计算的细枝末节都描述清楚。如果你不深入理解“石人”如何处理信息，就无法解释“石人”的输出。 这需要更详细地了解统计模型的细节，并且需要以最难的方式进行计算，在足够清楚细节之前就使用一键解决方案是不明智的。
 
-但人都是这样，有压力才有动力。所以本书坚持把“统计石人”计算的细枝末节都描述清楚。如果你不深入理解“石人”如何处理信息，就无法解释“石人”的输出。 这需要更详细地了解统计模型的细节，并且需要以最难的方式进行计算，在足够清楚细节之前就使用一键解决方案是不明智的。
-
+<!--
 There are conceptual obstacles as well, obstacles with how scholars define statistical ob- jectives and interpret statistical results. Understanding any individual golem is not enough, in these cases. Instead, we need some statistical epistemology, an appreciation of how sta- tistical models relate to hypotheses and the natural mechanisms of interest. What are we supposed to be doing with these little computational machines, anyway?
+-->
 
-在一些概念上也存在一些障碍，包括学者如何定义统计目标和解释统计结果都有一些问题。 所以只了解一个单独的“石人”是不够的。 相反，我们需要一些统计认识论，理解统计模型如何把假设和我们感兴趣的自然机制关联到一起。 无论如何，我们应该用这些小型的计算机器做什么呢？
+&emsp;&emsp;在一些概念上也存在一些障碍，包括学者如何定义统计目标和解释统计结果都有一些问题。 所以只了解一个单独的“石人”是不够的。 相反，我们需要一些统计认识论，理解统计模型如何把假设和我们感兴趣的自然机制关联到一起。 无论如何，我们应该用这些小型的计算机器做什么呢？
 
+<!--
 The greatest obstacle that I encounter among students and colleagues is the tacit belief that the proper objective of statistical inference is to test null hypotheses. This is the proper objective, the thinking goes, because Karl Popper argued that science advances by falsifying hypotheses. Karl Popper (1902–1994) is possibly the most influential philosopher of science, at least among scientists. He did persuasively argue that science works better by developing hypotheses that are, in principle, falsifiable. Seeking out evidence that might embarrass our ideas is a normative standard, and one that most scholars,whether they describe themselves as scientists or not, subscribe to. So maybe statistical procedures should falsify hypotheses, if we wish to be good statistical scientists.
+-->
 
-我在学生和同事中遇到的最大障碍是统计推断的默认终极目标其实是无效假设检验。 这是终极目标，当然大家考虑问题的路径也是这样的。卡尔.波普尔认为科学通过证伪假设而进步。 卡尔波普尔（1902-1994）应该是最影响力的科学哲学家，至少在科学家中间是这样的。 他通过提出理论上可证伪的假设，确确实实非常有说服力地说明了科学的有效性。 寻找可能推翻我们的想法的证据是一个规范标准，并且大多数学者，无论他们是否自认为自己是科学家，都赞同这一标准。 因此，如果我们希望成为优秀的统计科学家，那么统计程序应该证伪假设。
+&emsp;&emsp;我在学生和同事中遇到的最大障碍是统计推断的默认终极目标其实是无效假设检验。 这是终极目标，当然大家考虑问题的路径也是这样的。卡尔.波普尔认为科学通过证伪假设而进步。 卡尔波普尔（1902-1994）应该是最影响力的科学哲学家，至少在科学家中间是这样的。 他通过提出理论上可证伪的假设，确确实实非常有说服力地说明了科学的有效性。 寻找可能推翻我们的想法的证据是一个规范标准，并且大多数学者，无论他们是否自认为自己是科学家，都赞同这一标准。 因此，如果我们希望成为优秀的统计科学家，那么统计程序应该证伪假设。
 
+<!--
 But the above is a kind of folk Popperism, an informal philosophy of science common among scientists but not among philosophers of science. Science is not described by the falsification standard, as Popper recognized and argued.4 In fact, deductive falsification is impossible in nearly every scientific context. In this section, I review two reasons for this impossibility.
+-->
 
-但上面所说的其实是一种民间波普尔主义，一种在科学家中间普遍存在的非正式科学哲学，但科学哲学家却不这么认为。 就像波普尔所承认和论证的，科学不是用证伪标准描述的。事实上，几乎在每一个科学背景下，演绎证伪都是不可能的。 在本节中，我来回顾为什么不可能，有两个原因。
-
+&emsp;&emsp;但上面所说的其实是一种民间波普尔主义，一种在科学家中间普遍存在的非正式科学哲学，但科学哲学家却不这么认为。 就像波普尔所承认和论证的，科学不是用证伪标准描述的。事实上，几乎在每一个科学背景下，演绎证伪都是不可能的。 在本节中，我来回顾为什么不可能，有两个原因。
+<!--
 1) Hypotheses are not models. The relations among hypotheses and different kinds of models are complex. Many models correspond to the same hypothesis, and many hypotheses correspond to a single model. This makes strict falsification impossible.
-
+-->
 1) 假设不是模型，假设和不同模型间的关系非常复杂。很多模型对一个同一假设，很多假设又对应同一模型。严格的证伪是不可能的。
-
+<!--
 2） Measurement matters. Even when we think the data falsify a model, another ob- server will debate our methods and measures. They don’t trust the data. Sometimes they are right.
-
+-->
 2）测量原因，有时候我们认为数据推翻了一个模型，但是其他人会质疑我们所用的方法和数据计量。他们不相信数据，而且有时候数据或者对数据的计量确实有问题。
 
-
+<!--
 For both of these reasons, deductive falsification never works. The scientific method cannot be reduced to a statistical procedure, and so our statistical methods should not pretend. Statistical evidence is part of the hot mess that is science, with all of its combat and egotism and mutual coercion. If you believe, as I do, that science does very often work, then learning that it doesn’t work via falsification shouldn’t change your mind. But it might help you do better science, because it will open your eyes to the many legitimately useful functions of statistical golems.
+-->
 
-基于这些原因，演绎证伪从来都是无效的。科学方法不能归纳为一个统计过程，统计方法也不能臆想。统计证据连带其争论、自我主义及彼此强制都是科学热点的一部分。如果像我一样相信科学大部分时候有用，那么通过证伪的方法来学习就不会有问题。而且还会更好的帮助做好科学研究，因为能让我们体会到很多统计石人的合理的应用。
+&emsp;&emsp;基于这些原因，演绎证伪从来都是无效的。科学方法不能归纳为一个统计过程，统计方法也不能臆想。统计证据连带其争论、自我主义及彼此强制都是科学热点的一部分。如果像我一样相信科学大部分时候有用，那么通过证伪的方法来学习就不会有问题。而且还会更好的帮助做好科学研究，因为能让我们体会到很多统计石人的合理的应用。
 
 Rethinking: Is NHST falsificationist? Null hypothesis significance testing, NHST, is often identified with the falsificationist, or Popperian, philosophy of science. However, usually NHST is used to falsify a null hypothesis, not the actual research hypothesis. So the falsification is being done to something other than the explanatory model. This seems the reverse from Karl Popper’s philosophy.
 
