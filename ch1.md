@@ -20,7 +20,7 @@
 
 ## 1.1 统计学中的石人
 &emsp;&emsp;科学家也铸造了他们的石人，只不过我们的石人很少有具体的物理形态，但它们也是由粘土制成，以硅和计算机代码的形式存在。 这些石人就是科学模型。这些模型通过他们的预测能力以及对直觉的挑战或激发，来影响世界。对“真”的探求驱动着这些模型运转，但就像石人或现代机器人一样，科学模型既不是真也不是假，既不是先知也不是骗子。 相反，它们是为某种目的而设计的结构。 这些结构非常强大，不知疲倦地按照编程逻辑进行计算。
-![图1-1](https://github.com/randyli/statistical_rethinking/blob/master/images/figure1-1.png?raw=true =300*300)
+![图1-1](https://github.com/randyli/statistical_rethinking/blob/master/images/figure1-1.png?raw=true)
 *图1-1 选择统计方法的决策树或者流程图的一个例子，从最上面开始，回答几个问题就可以找到一个统计方法，当然类似的决策流程还有很多*
 
 &emsp;&emsp;有时这些模型的硬逻辑揭示了一些以前设计师不知道的意义，这些发现可能是无价之宝，也可能产生愚蠢和危险的后果。 科学模型不是理想化的理性天使，而是强大的粘土机器人，他们没有自己的意识，只会按照预设的短视指令笨手笨脚的工作。 与拉比.犹大的石人一样，科学的石人也有它的正面和负面。 我们绝对必须使用它们，但这样做同时也会伴随一些风险。
@@ -130,12 +130,12 @@ Unfortunately, other selection models (P1B) imply the same statistical model, MI
 (2) Any given hypothesis (H) may correspond to more than one process model (P). (3) Any given statistical model (M) may correspond to more than one hypothesis (H).
 -->
 
-不幸的是，其他的模型（P<sub>1B</<sub>）和中性模型一样也能推到出统计模型M<sub>Ⅱ</sub>，也推导出幂律。这就尴尬了：
-1 一个统计模型（M），可能对应多个过程模型（P）。
+不幸的是，其他的模型（P<sub>1B</</sub>）和中性模型一样也能推到出统计模型M<sub>Ⅱ</sub>，也推导出幂律。这就尴尬了：
+1. 一个统计模型（M），可能对应多个过程模型（P）。
 
-2 一个假设可能对应多个过程模型（P）
+2. 一个假设可能对应多个过程模型（P）
 
-3 一个统计模型可能对应多个假设（H）
+3. 一个统计模型可能对应多个假设（H）
 
 <!--
 Now look what happens when we compare the statistical models to data. The classical ap- proach is to take the “neutral” model as a null hypothesis. If the data are not sufficiently similar to the expectation under the null, then we say that we “reject” the null hypothesis. Suppose we follow the history of this subject and take P0A as our null hypothesis. This implies data corresponding to MII. But since the same statistical model corresponds to a selection model P1B, it’s not at all clear what we are to make of either rejecting or accepting the null. The null model is not unique to any process model nor hypothesis. If we reject the null, we can’t really conclude that selection matters, because there are other neutral models that predict different distributions of alleles. And if we fail to reject the null, we can’t really conclude that evolution is neutral, because some selection models expect the same frequency distribution.
