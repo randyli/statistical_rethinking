@@ -377,67 +377,130 @@ Bayesian data analysis became increasingly accepted within statistics during the
 
 >贝叶斯分析在20世纪后期逐渐被大家接受，因为证明了它的基础是没错的。不管哲学上怎么样，反正它起作用了。20世纪90年代开始，新计算方法的发展，贝叶斯方法也得到了极大的发展。但是贝叶斯方法依然需要大量的计算。所以对于大数据集比如几百万行基因数据的分析仍然需要寻找其他方法或者优化贝叶斯推断。
 
+<!--
 1.3.2. Multilevel models. In an apocryphal telling of Hindu cosmology, it is said that the Earth rests on the back of a great elephant, who in turn stands on the back of a massive turtle. When asked upon what the turtle stands, a guru is said to reply, “it’s turtles all the way down.”
-1.3.2 多级模型。在印度教一个关于宇宙的传说中，地球是在一个巨大的大象背上，而大象是在一个巨大的乌龟背上。而问及乌龟在那儿，一位大神说“乌龟就是乌龟”。
+-->
+1.3.2 **多级模型** 在印度教一个关于宇宙的传说中，地球是在一个巨大的大象背上，而大象是在一个巨大的乌龟背上。而问及乌龟在那儿，一位大神说“乌龟就是乌龟”。
 
+<!--
 Statistical models don’t contain turtles, but they do contain parameters. And parameters support inference. Upon what do parameters themselves stand? Sometimes, in some of the most powerful models, it’s parameters all the way down. What this means is that any particular parameter can be usefully regarded as a placeholder for a missing model. Given some model of how the parameter gets its value, it is simple enough to embed the new model inside the old one. This results in a model with multiple levels of uncertainty, each feeding into the next—a multilevel model.
-统计模型中当然没有乌龟，但是却有参数。而且参数还可以推断。参数依赖什么？有时，在一些高级模型中，从上到下都是参数。什么意思呢？参数可以作为缺失模型的占位符。给定一些模型的参数值，就可以嵌入其他模型。导致一个模型会产生多层的不确定，一个参数依赖另一个参数，也就是多层模型。
+-->
+
+&emsp;&emsp;统计模型中当然没有乌龟，但是却有参数。而且参数还可以推断。参数依赖什么？有时，在一些高级模型中，从上到下都是参数。什么意思呢？参数可以作为缺失模型的占位符。给定一些模型的参数值，就可以嵌入其他模型。导致一个模型会产生多层的不确定，一个参数依赖另一个参数，也就是多层模型。
+
+<!--
 Multilevel models—also known as hierarchical, random effects, varying effects, or mixed effects models—are becoming de rigueur in the biological and social sciences. Fields as di- verse as educational testing and bacterial phylogenetics now depend upon routine multilevel models to process data. Like Bayesian data analysis, multilevel modeling is not particularly new, but it has only been available on desktop computers for a few decades. And since such models have a natural Bayesian representation, they have grown hand-in-hand with Bayesian data analysis.
-多层模型-也叫结构化模型，随机效应， 变化效应，或者混合效应模型-在生物和社会学中正在变成必备内容。教育测试和细菌培养等多个领域用多层模型来处理数据。跟贝叶斯分析一样，多层模型也不是什么新概念，只是最近几十年才在桌面年电脑上得以应用。因为拥有天然的贝叶斯表达，所以多层模型伴随着贝叶斯数据分析的发展也得到了极大的发展。
+-->
+&emsp;&emsp;多层模型-也叫结构化模型，随机效应， 变化效应，或者混合效应模型-在生物和社会学中正在变成必备内容。教育测试和细菌培养等多个领域用多层模型来处理数据。跟贝叶斯分析一样，多层模型也不是什么新概念，只是最近几十年才在桌面年电脑上得以应用。因为拥有天然的贝叶斯表达，所以多层模型伴随着贝叶斯数据分析的发展也得到了极大的发展。
+<!--
 There are four typical and complementary reasons to use multilevel models:
-使用多层模型的四个原因：
+-->
+&emsp;&emsp;使用多层模型的四个原因：
+<!--
 1） To adjust estimates for repeat sampling. When more than one observation arises from the same individual, location, or time, then traditional, single-level models may mislead us.
+-->
 1）调整重复采样的估计值。如果对相同的个体、地点或时间重复采样，传统的单级模型就会误导人。
+<!--
 2）To adjust estimates for imbalance in sampling. When some individuals,locations,or times are sampled more than others, we may also be misled by single-level models.
+-->
 2）调整采样不平衡的估计。当我们对某些个体，地点或者时间采样比其他的多时，同样也可能被单层模型误导。
+<!--
 3）To study variation. If our research questions include variation among individuals or other groups within the data, then multilevel models are a big help, because they model variation explicitly.
+-->
 3）研究差异。如果我们研究的问题中包含个体之间或组群之间的差异，多级模型可以对差异很好的建模。
+<!--
 4）To avoid averaging. Frequently, scholars pre-average some data to construct vari- ables for a regression analysis. This can be dangerous, because averaging removes variation. It therefore manufactures false confidence. Multilevel models allow us to preserve the uncertainty in the original, pre-averaged values, while still using the average to make predictions.
+-->
+
 4）避免平均。通常大家都是把一些数据先做平均然后回归分析。这有问题，均值会差异平均掉。会产生错误的信心，多层模型可以保留原值的不确定性但依然用平均值预测。
+<!--
 All four apply to contexts in which the researcher recognizes clusters or groups of measure- ments that may differ from one another. These clusters or groups may be individuals such as different students, locations such as different cities, or times such as different years. Since each cluster may well have a different average tendency or respond differently to any treat- ment, clustered data often benefit from being modeled by a golem that expects such variation.
-在研究聚簇或者群组之间的差别时，四种情形比较常见。聚簇或者群组可能是不同的个体比如不同的学生，不同的地点比如不同的城市，或者不同的时间比如不同年。因为群组之间的平均趋势比较明显或者对于不同治疗反应不同，所以模型如果能够适配这些差异会大有好处。
+-->
+&emsp;&emsp;在研究聚簇或者群组之间的差别时，四种情形比较常见。聚簇或者群组可能是不同的个体比如不同的学生，不同的地点比如不同的城市，或者不同的时间比如不同年。因为群组之间的平均趋势比较明显或者对于不同治疗反应不同，所以模型如果能够适配这些差异会大有好处。
+<!--
 But the scope of multilevel modeling is much greater than these examples. Diverse model types turn out to be multilevel: models for missing data (imputation), measurement error, factor analysis, some time series models, types of spatial and network regression, and phylogenetic regressions all are special applications of the multilevel strategy. This is why grasping the concept of multilevel modeling may lead to a perspective shift. Suddenly single- level models end up looking like mere components of multilevel models. The multilevel strategy provides an engineering principle to help us to introduce these components into a particular analysis, exactly where we think we need them.
-当然多级模型的应用远不止这些。很多模型其实都是多层次的：处理缺失值的模型（插补法），测量误差，因子分析，一些时间序列模型，一些空间或网络回归分析，还有系统发育回归都是多层模型的应用。这也就是为什么了解完多层模型，看问题的视角也会发生变化。单层模型就像是多层模型的组件。多层模型提供给我们一种把这些组件应用在特定的分析中的机制。
+-->
+&emsp;&emsp;当然多级模型的应用远不止这些。很多模型其实都是多层次的：处理缺失值的模型（插补法），测量误差，因子分析，一些时间序列模型，一些空间或网络回归分析，还有系统发育回归都是多层模型的应用。这也就是为什么了解完多层模型，看问题的视角也会发生变化。单层模型就像是多层模型的组件。多层模型提供给我们一种把这些组件应用在特定的分析中的机制。
+<!--
 I want to convince the reader of something that appears unreasonable: multilevel regres- sion deserves to be the default form of regression. Papers that do not use multilevel models should have to justify not using a multilevel approach. Certainly some data and contexts do not need the multilevel treatment. But most contemporary studies in the social and natural sciences, whether experimental or not, would benefit from it. Perhaps the most important reason is that even well-controlled treatments interact with unmeasured aspects of the indi- viduals, groups, or populations studied. This leads to variation in treatment effects, in which individuals or groups vary in how they respond to the same circumstance. Multilevel mod- els attempt to quantify the extent of this variation, as well as identify which units in the data responded in which ways.
-读者可能认为我的观点有点激进：我认为做回归分析的时候应该默认选择多层模型。不用多集模型的论文应该证明为什么不需要多层模型。当然有些数据或者情况不需要多级处理。但是现在大部分的社会科学和自然科学的研究，无论是试验性的或者非试验性的，都应该尝试多层模型。即使控制的再好的实验，也会跟观测不到的个体、群组或者种群发生联系。所以个体或者群组对环境的反应就会不同，对最终结果就会产生影响。多层模型量化这些不同，也会甄别系统的哪个部分是以哪种方式对环境作出反应的。
+-->
+&emsp;&emsp;读者可能认为我的观点有点激进：我认为做回归分析的时候应该默认选择多层模型。不用多集模型的论文应该证明为什么不需要多层模型。当然有些数据或者情况不需要多级处理。但是现在大部分的社会科学和自然科学的研究，无论是试验性的或者非试验性的，都应该尝试多层模型。即使控制的再好的实验，也会跟观测不到的个体、群组或者种群发生联系。所以个体或者群组对环境的反应就会不同，对最终结果就会产生影响。多层模型量化这些不同，也会甄别系统的哪个部分是以哪种方式对环境作出反应的。
+<!--
 These benefits don’t come for free, however. Fitting and interpreting multilevel models can be considerably harder than fitting and interpreting a traditional regression model. In practice, many researchers simply trust their black-box software and interpret multilevel re- gression exactly like single-level regression. In time, this will change. There was a time in applied statistics when even ordinary multiple regression was considered cutting edge, some- thing for only experts to fiddle with. Instead, scientists used many simple procedures, like t-tests. Now, almost everyone uses the better multivariate tools. The same will eventually be true of multilevel models. But scholarly culture and curriculum still have a little catching up to do.
-当然没有免费的午餐。拟合和解释多层模型比单层模型要复杂的多。实际应用中，很多人都是依赖黑箱软件，像解释单层回归一样解释多层回归。曾经应用统计学中即使是普通的多级回归大家也认为非常高深，只有少数的专家才能掌握。所以大家才用了很多单层模型比如t-test。但现在每个人都会用一些多变量工具。多层分析也一样。只是学术文化和课程还有一点差距。
+-->
+&emsp;&emsp;当然没有免费的午餐。拟合和解释多层模型比单层模型要复杂的多。实际应用中，很多人都是依赖黑箱软件，像解释单层回归一样解释多层回归。曾经应用统计学中即使是普通的多级回归大家也认为非常高深，只有少数的专家才能掌握。所以大家才用了很多单层模型比如t-test。但现在每个人都会用一些多变量工具。多层分析也一样。只是学术文化和课程还有一点差距。
 
+<!--
 Rethinking: Multilevel election forecasting. One of the older applications of multilevel modeling is to forecast the outcomes of democratic elections. In the early 1960s, John Tukey (1915–2000) began working for the National Broadcasting Company (NBC) in the United States, developing real-time election prediction models that could exploit diverse types of data: polls, past elections, partial results, and complete results from related districts. The models used a multilevel framework similar to the models presented in Chapters 12 and 13. Tukey developed and used such models for NBC through 1978. Contemporary election prediction and poll aggregation remains an active topic for multilevel modeling.
-思考：基于多层模型的选举预测。多层模型的一个较早的应用是预测民主选举结果。在20世纪60年代早期，约翰·图基（1915-2000）开始为美国国家广播公司（NBV）工作，开发实时选举预测模型，模型可以处理各种数据，包括民意调查，往年的选举数据，部分结果，还有相关选区的完整结果。模型就是应用了多层模型，在第12章和第13章会有详细论述。图基1978年在NBC开发并应用了这个模型。当前选举预测和民意调查仍然是多层建模的热门主题。
+-->
+>思考：基于多层模型的选举预测。多层模型的一个较早的应用是预测民主选举结果。在20世纪60年代早期，约翰·图基（1915-2000）开始为美国国家广播公司（NBV）工作，开发实时选举预测模型，模型可以处理各种数据，包括民意调查，往年的选举数据，部分结果，还有相关选区的完整结果。模型就是应用了多层模型，在第12章和第13章会有详细论述。图基1978年在NBC开发并应用了这个模型。当前选举预测和民意调查仍然是多层建模的热门主题。
+<!--
 1.3.3. Model comparison and information criteria. Beginning seriously in the 1960s and 1970s, statisticians began to develop a peculiar family of metrics for comparing structurally different models: information criteria. All of these criteria aim to let us compare mod- els based upon future predictive accuracy. But they do so in more and less general ways and by using different approximations for different model types. So the number of unique information criteria in the statistical literature has grown quite large. Still, they all share this common enterprise.
-1.3.3 模型比较和信息准则。20世纪60年代和70年代，统计学家开始开发一些衡量和对比不同模型的标准：信息准则。所有模型的对比准则都基于模型预测的准确度。但是不同模型应用不同的优化方法。所以不同版本的信息准则在统计学的学术会议上越来越多。但是基础都是一样的。
+-->
+
+1.3.3 **模型比较和信息准则** 20世纪60年代和70年代，统计学家开始开发一些衡量和对比不同模型的标准：信息准则。所有模型的对比准则都基于模型预测的准确度。但是不同模型应用不同的优化方法。所以不同版本的信息准则在统计学的学术会议上越来越多。但是基础都是一样的。
+<!--
 The most famous information criterion is AIC, the Akaike (ah-kah-ee-kay) information criterion. AIC and related metrics—we’ll discuss DIC and WAIC as well—explicitly build a model of the prediction task and use that model to estimate performance of each model you might wish to compare. Because the prediction is modeled, it depends upon assumptions. So information criteria do not in fact achieve the impossible, by seeing the future. They are still golems.
-最著名的信息准则是AIC-赤池信息量准则。AIC以及一些相关的指标比如DIC和WAIC，都是为预测任务建立一个模型，然后用这个模型去预测需要对比的模型的表现。因为预测是模型化的，基于假设，所以信息标准也没法预见未来。所以仍然是工具。
+-->
+&emsp;&emsp;最著名的信息准则是AIC-赤池信息量准则。AIC以及一些相关的指标比如DIC和WAIC，都是为预测任务建立一个模型，然后用这个模型去预测需要对比的模型的表现。因为预测是模型化的，基于假设，所以信息标准也没法预见未来。所以仍然是工具。
+<!--
 AIC and its kin are known as “information” criteria, because they develop their measure of model accuracy from information theory. Information theory has a scope far beyond comparing statistical models. But it will be necessary to understand a little bit of general information theory, in order to really comprehend information criteria. So in Chapter 6, you’ll also find a conceptual crash course in information theory.
-AIC及其扩展之所以叫“信息”准则，是因为这些模型都是从信息论而来的。当然信息论的范畴远不止统计模型的比较。但是为了深入了解信息准则我们还是有必要了解一些信息论的基础。所以在第6章我们简要介绍了一下信息论。
+-->
+&emsp;&emsp;AIC及其扩展之所以叫“信息”准则，是因为这些模型都是从信息论而来的。当然信息论的范畴远不止统计模型的比较。但是为了深入了解信息准则我们还是有必要了解一些信息论的基础。所以在第6章我们简要介绍了一下信息论。
+<!--
 What AIC and its kin actually do for a researcher is help with two common difficulties in model comparison.
-AIC及其扩展主要解决模型表时的两个困难。
+-->
+&emsp;&emsp;AIC及其扩展主要解决模型表时的两个困难。
+<!--
 （1）The most important statistical phenomenon that you may have never heard of is overfitting.  Overfitting is the subject of Chapter 6. For now, you can under- stand overfitting with this mantra: fitting is easy; prediction is hard. Future data will not be exactly like past data, and so any model that is unaware of this fact tends to make worse predictions than it could. So if we wish to make good predictions, we cannot judge our models simply on how well they fit our data. Information criteria provide estimates of predictive accuracy, rather than merely fit. So they compare models where it matters.
+-->
 （1）也许你没听过，统计中很大的一个问题是过拟合。第6章时关于过拟合的。现在可以简单理解一下，拟合很容易，预测却很难。未来的数据与过去不同，所以不考虑这个因素的模型预测都比较差。所以如果想做出好的预测，不能仅仅考虑对已有的数据的拟合度。信息准则提供了对预测的估计，而不是单纯的对拟合度的测量。所以它可以用来比较模型。
+<!--
 （2） A major benefit of using AIC and its kin is that they allow for comparison of mul- tiple non-null models to the same data. Frequently, several plausible models of a phenomenon are known to us. The neutral evolution debate (page 6) is one example. In some empirical contexts, like social networks and evolutionary phylogenies, there are no reasonable or uniquely “null” models. This was also true of the neutral evolution example. In such cases, it’s not only a good idea to explicitly compare models. It’s also mandatory. Information criteria aren’t the only way to conduct the comparison. But they are an accessible and widely used way.
+-->
 （2）AIC及其扩展的主要优势是可以比较多个非零模型。通常对于某个现象我们已经有若干个相对合理的模型。中微粒子的例子（第6页）就是一个很好的例子。还有一个情况比如社会网络和进化系统发展，就没有明确的“零”模型。在中性进化说中也是一样的。这种情况下对比不同模型不光是个是个好主意而且是必须的。当然信息准则不是唯一的方法。而是广泛应用的。
+<!--
 Multilevel modeling and Bayesian data analysis have been worked on for decades and centuries, respectively. Information criteria are comparatively very young. Many statisti- cians have never used information criteria in an applied problem, and there is no consensus about which metrics are best and how best to use them. Still, information criteria are already in frequent use in the sciences—appearing in prominent publications and featuring in promi- nent debates33—and a great deal is known about them, both from analysis and experience.
-多层模型和贝叶斯数据分析已经分别发展了数十年和几个世纪。信息准则相对比较年轻。很多统计学家从没有在实际问题中应用过，所以哪种评价方式最好以及怎么应用最好也没有定论。但是信息准则在科学研究中已经开始频繁的使用，频繁的出现在各种刊物中。
+-->
+&emsp;&emsp;多层模型和贝叶斯数据分析已经分别发展了数十年和几个世纪。信息准则相对比较年轻。很多统计学家从没有在实际问题中应用过，所以哪种评价方式最好以及怎么应用最好也没有定论。但是信息准则在科学研究中已经开始频繁的使用，频繁的出现在各种刊物中。
+<!--
 Rethinking: The Neanderthal in you. Even simple models need alternatives. In 2010, a draft genome of a Neanderthal demonstrated more DNA sequences in common with non-African contemporary humans than with African ones. This finding is consistent with interbreeding between Neanderthals and modern humans, as the latter dispersed from Africa. However, just finding DNA in common between modern Europeans and Neanderthals is not enough to demonstrate interbreeding. It is also consistentwithancientstructureintheAfricancontinent.34 Inshort,ifancientnorth-eastAfricans had unique DNA sequences, then both Neanderthals and modern Europeans could possess these sequences from a common ancestor, rather than from direct interbreeding. So even in the seemingly simple case of estimating whether Neanderthals and modern humans share unique DNA, there is more than one process-based explanation. Model comparison is necessary.
-思考：身边的尼安德特人。再简单的模型也需要替代。2010年，一个关于尼安德特人的基因草图表明非非洲现代人比非洲人相同基因要多。这个发现可以解释为尼安德特人和现代人有血缘关系。但是仅仅发现现代欧洲人和尼安德特人之间有相同基因还不足以证明他们有血缘关系。它也符合古老非洲大陆的结构，所以尼安德特人和现代欧洲人也可能有共同的祖先而不是通过混血才有了共同的基因。所以估计尼安德特人和现代人是不是有相同基因看似这个简单的问题也可以有多种解释，所以模型之间的对比是很有必要的。
+-->
+>思考：身边的尼安德特人。再简单的模型也需要替代。2010年，一个关于尼安德特人的基因草图表明非非洲现代人比非洲人相同基因要多。这个发现可以解释为尼安德特人和现代人有血缘关系。但是仅仅发现现代欧洲人和尼安德特人之间有相同基因还不足以证明他们有血缘关系。它也符合古老非洲大陆的结构，所以尼安德特人和现代欧洲人也可能有共同的祖先而不是通过混血才有了共同的基因。所以估计尼安德特人和现代人是不是有相同基因看似这个简单的问题也可以有多种解释，所以模型之间的对比是很有必要的。
 
-## 1.4 Summary 小结
+## 1.4 小结
 
+<!--
 This first chapter has argued for a rethinking of popular statistical and scientific philos- ophy. Instead of choosing among various black-box tools for testing null hypotheses, we should learn to build and analyze multiple non-null models of natural phenomena. To sup- port this goal, the chapter introduced Bayesian inference, multilevel models, and informa- tion theoretic model comparison.
-第一章我们重新思考了现代统计和科学哲学。我们应该学习建立和分析各种自然现象的多层非零模型，而不是直接选择黑箱工具。基于此本章介绍了贝叶斯推断，多层模型和基于信息准则的模型对比
+-->
+&emsp;&emsp;第一章我们重新思考了现代统计和科学哲学。我们应该学习建立和分析各种自然现象的多层非零模型，而不是直接选择黑箱工具。基于此本章介绍了贝叶斯推断，多层模型和基于信息准则的模型对比
+<!--
 The remainder of the book is organized into four interdependent parts.
+-->
 后面的章节包括以下四个部分：
+<!--
 (1)  Chapters2and3arefoundational.TheyintroduceBayesianinferenceandthebasic tools for performing Bayesian calculations. They move quite slowly and emphasize a purely logical interpretation of probability theory.
+-->
 （1） 第2章第三章是基础章节，介绍了贝叶斯推断中的进行贝叶斯计算的基础工具。讲的会比较慢，着重强调概率理论的纯逻辑解释。
+<!--
 (2)  The next four chapters, 4 through 7, build multiple linear regression as a Bayesian tool. These chapters also move rather slowly, largely because of the emphasis on plotting results, including interaction effects. Problems of model complexity— overfitting—also feature prominently. So you’ll also get an introduction to infor- mation theory in Chapter 6.
+-->
 （2） 第4到第7四个章节，应用贝叶斯工具构建多层线性模型。这些章节也同样介绍的比较慢，很大程度上因为需要将结果画出来，包括相互之间的影响。类似过拟合等复杂模型问题也进行了讲解。所以第6章对信息论也有简单介绍。
+<!--
 (3)  Thethirdpartofthebook,Chapters8through11,presentsgeneralizedlinearmod- els of several types. Chapter 8 is something of a divider, as it introduces Markov chain Monte Carlo, used to fit the non-linear models in Chapters 10 through 14. Chapter 9 introduces maximum entropy as an explicit procedure to help us design these models. Then Chapters 10 and 11 detail the models themselves.
+-->
 （3）本书的第三部分包括第8-11章，介绍了几种一般线性模型。第8章作为一个承接作用，介绍了第10-14章用到的马尔可夫链蒙特卡洛。第9章介绍了最大熵建模工具。第10-11章介绍了这些模型的细节。
+<!--
 (4) Thelastpart,Chapters12through14,getsaroundtomultilevelmodels,bothlinear and generalized linear, as well as specialized types that address measurement error, missing data, and spatial correlation modeled through Gaussian processes. This material is fairly advanced, but it proceeds in the same mechanistic way as earlier material.
+-->
 （4）最后一部分，第12-14章，介绍了多层模型包括线性和一般模型，还有一些特殊类型如观测误差的处理，缺失值处理和基于高斯过程的空间关联。这些材料相对比较难，但是跟之前的处理机制是一样的。
+<!--
 The final chapter, Chapter 15, returns to some of the issues raised in this first one.
+-->
 最后一章，第15章，讨论了一些开篇提出的问题
+<!--
 At the end of each chapter, there are practice problems ranging from easy to hard. These problems help you test your comprehension. The harder ones expand on the material, intro-
 ducing new examples and obstacles. The solutions to these problems are available online.
+-->
+
 每章结尾处，有一些练习题，从易到难。可以用来测试掌握的程度。难一点的在材料中有展开，介绍了新的例子和问题。网站上有习题的答案。
