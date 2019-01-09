@@ -5,6 +5,9 @@ When Cristoforo Colombo (Christopher Columbus) infamously sailed west in the yea
 -->
 &emsp;&emsp;1492年当哥伦布开始他那臭名昭著的航海的时候，他就相信地球是圆的。这一点上跟那个时候受过教育的人的认知是相同的。但是跟其他人不同的是，他认为地球要小的多，直径大约3万公里而不是实际上的4万公里（图2-1）。这是欧洲历史上很重要的错误之一。如果哥伦布相信地球直径是4万公里，他肯定能推算出船队不可能携带足够的食物和淡水到达亚洲。但如果是3万的话，亚洲就位于加利福尼亚海岸西边一点点。这样得出的结论就是可以到达的。基于这样乐观的估计，哥伦布才开始航海，最终在巴哈马登陆。
 
+<p align="center"> <img src="../images/figure2-1.png" alt="figure2-1" width="200"/> </p>
+*马丁·贝海姆绘制的哥伦布使用的1492年的世界地图，欧洲在右边，亚洲在左边，那个写着Cipangu的岛是日本*
+
 <!--
 Colombo made a prediction based upon his view that the world was small. But since he lived in a large world, aspects of the prediction were wrong. In his case, the error was lucky. His small world model was wrong in an unanticipated way: There was a lot of land in the way. If he had been wrong in the expected way, with nothing but ocean between Europe and Asia, he and his entire expedition would have run out of supplies long before reaching the East Indies.
 -->
