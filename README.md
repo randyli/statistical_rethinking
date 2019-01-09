@@ -7,4 +7,4 @@ statistical rethinking 的中文翻译
 - [1.2 重新思考统计学](https://github.com/randyli/statistical_rethinking/blob/master/ch1.md#12-重新思考统计学)
 - [1.3 建造石人的三种工具](https://github.com/randyli/statistical_rethinking/blob/master/ch1.md#13-建造石人的三种工具)
 - [1.3 小结](https://github.com/randyli/statistical_rethinking/blob/master/ch1.md#14-小结)
-- [小世界VS大世界](#/ch2)
+- [小世界VS大世界](#https://github.com/randyli/statistical_rethinking/blob/master/ch2)
